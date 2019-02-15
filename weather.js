@@ -1,24 +1,3 @@
-/*const baseURL = "https://api.openweathermap.org/data/2.5/weather?q=Glasgow&APPID=31bfcbea061f0bd7c06d6bbf48bae278";
-
-function getWeather(cb) {
-    var xhr = new XMLHttpRequest();
-
-    xhr.open("GET", baseURL);
-    xhr.send();
-
-    xhr.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        cb(JSON.parse(this.responseText));
-        }  
-    };
-}
-
-function writeToDocument() {
-    getWeather(function(weather) {
-        console.log(weather);
-        document.getElementById("weather-info").innerHTML = weather.main ;
-    });
-}*/
 
 $(document).ready(function() {
     const baseURL = "https://api.openweathermap.org/data/2.5/weather?q=Glasgow&APPID=31bfcbea061f0bd7c06d6bbf48bae278";
@@ -46,12 +25,9 @@ $(document).ready(function() {
                     minTemperature,
                     maxTemperature
                     };
-                console.dir(weather);
-                $("#weather-info").html(`<p>${weatherDescription}<br>${temperature}, ${minTemperature}, ${maxTemperature}</p>`);
-                }
                 
-               
-            
+                $("#weather-info").html(`<p>The current weather is ${weatherDescription}<br> current temperature is ${temperature}, today's high ${minTemperature}, today's low ${maxTemperature}</p>`);
+                }
             }
         );
 });
