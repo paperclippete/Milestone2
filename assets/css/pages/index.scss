@@ -1,3 +1,5 @@
+///////////universal styles/////////////
+
 html {
     height: 100%;
 }
@@ -9,12 +11,16 @@ body {
     font-family: "Rubik", sans-serif;
 }
 
-.section1 {
+section {
     height: 100%;
 }
 
+.section2 {
+    background-color: $gbeige;
+}
+
 .navbar {
-    position: absolute;
+    position: fixed;
     z-index: 10;
     right: 0px;
 }
@@ -30,30 +36,31 @@ body {
     }
 }
 
+.scroll-section {
+    height: 100%;
+    padding: 0px;
+}
+
+////////////site-heading styles////////////////
+
 .site-heading,
 .section-heading {
     font-family: "Baloo", sans-serif;
 }
 
-//img needs to become mixin
+
 
 .site-intro-img {
-    background: {
-        image: url("../../assets/images/glasgow-images/flkrfinniestoncrane.jpg");
-        size: cover;
-        attachment: fixed;
-        position: center;
-        repeat: no-repeat;
-        size: cover;
-    }
-    position: relative;
-    height: 100%;
-} 
+    background-image: linear-gradient(rgba(245, 135, 64, 0.1), rgba(245, 135, 64, 0.5)), url("../../assets/images/glasgow-images/flkrfinniestoncrane.jpg");
+    @extend %background-image;
+}
+ 
 
 .site-heading {
-    background-color: $gorange;
-    color: black;
-    font-size: 500%;
+    color: $gorange;
+    font-size: 4rem;
+    text-shadow: 2px 4px 6px $ggrey;
+    letter-spacing: 0.6rem;
     margin: 0 auto;
     padding: 10px;
     width: 100%;
@@ -62,5 +69,100 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    mix-blend-mode: screen;
+    @include tablet {
+        font-size: 8rem;
+        letter-spacing: 0.8rem;
+    }
+    @include desktop {
+        font-size: 12rem;
+        letter-spacing: 1rem;
+    }
+    @include large-desktop {
+        font-size: 14rem;
+        letter-spacing: 1.2rem;
+    }
 }
+
+#subway {
+    position: absolute;
+    bottom: 5%;
+    animation-name: bounce;
+    animation-duration: 3s;
+    height: 45px;
+    width: 45px;
+    left: 44%;
+    @include tablet {
+        height: 70px;
+        width: 70px;
+        left: 45.7%;
+    }
+    @include desktop {
+        height: 100px;
+        width: 100px;
+        left: 45%;
+    }
+    @include large-desktop {
+        height: 110px;
+        width: 110px;
+        left: 46.2%;
+    }
+    
+        
+}
+
+
+/////////// food and drink styles ////////////
+
+.food-drink-images {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    padding: 60px;
+    
+}
+
+.food-drink-img {
+    display: inline;
+    width: 40%;
+    height: 40%;
+    padding: 0;
+    @include tablet {
+        height: 40%;
+        width: 30%;
+    }
+    @include desktop {
+        height: 40%;
+        width: 30%;
+    }
+    @include large-desktop {
+        width: 30%;
+    }
+}
+   
+.img-1 {
+    transform: rotate(-16deg);
+    z-index: 1;
+} 
+
+#ashton-lane {
+    width: 50%;
+    @include desktop {
+        width: 40%;
+    }
+    @include large-desktop {
+        width: 30%;
+    }
+}
+
+.img-3 {
+    transform: rotate(17deg);
+}
+    
+.food-drink-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+   

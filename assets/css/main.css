@@ -1,17 +1,39 @@
+.site-intro-img {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100%; }
+
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0); }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0); }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-100px); }
+  50% {
+    transform: scale(1, 1) translateY(0); }
+  100% {
+    transform: scale(1, 1) translateY(0); } }
 html {
   height: 100%; }
 
 body {
   height: 100%;
-  background-color: #f58740;
+  background-color: #f57c14;
   color: #4d4d4d;
   font-family: "Rubik", sans-serif; }
 
-.section1 {
+section {
   height: 100%; }
 
+.section2 {
+  background-color: #f0ebda; }
+
 .navbar {
-  position: absolute;
+  position: fixed;
   z-index: 10;
   right: 0px; }
 
@@ -22,26 +44,24 @@ body {
   padding: 4px 6px; }
   .btn:hover {
     background-color: #4d4d4d;
-    color: #f58740; }
+    color: #f57c14; }
+
+.scroll-section {
+  height: 100%;
+  padding: 0px; }
 
 .site-heading,
 .section-heading {
   font-family: "Baloo", sans-serif; }
 
 .site-intro-img {
-  background-image: url("../../assets/images/glasgow-images/flkrfinniestoncrane.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  height: 100%; }
+  background-image: linear-gradient(rgba(245, 135, 64, 0.1), rgba(245, 135, 64, 0.5)), url("../../assets/images/glasgow-images/flkrfinniestoncrane.jpg"); }
 
 .site-heading {
-  background-color: #f58740;
-  color: black;
-  font-size: 500%;
+  color: #f57c14;
+  font-size: 4rem;
+  text-shadow: 2px 4px 6px #4d4d4d;
+  letter-spacing: 0.6rem;
   margin: 0 auto;
   padding: 10px;
   width: 100%;
@@ -49,7 +69,88 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  mix-blend-mode: screen; }
+  transform: translate(-50%, -50%); }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .site-heading {
+      font-size: 8rem;
+      letter-spacing: 0.8rem; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .site-heading {
+      font-size: 12rem;
+      letter-spacing: 1rem; } }
+  @media (min-width: 1200px) {
+    .site-heading {
+      font-size: 14rem;
+      letter-spacing: 1.2rem; } }
+
+#subway {
+  position: absolute;
+  bottom: 5%;
+  animation-name: bounce;
+  animation-duration: 3s;
+  height: 45px;
+  width: 45px;
+  left: 44%; }
+  @media (min-width: 768px) and (max-width: 991px) {
+    #subway {
+      height: 70px;
+      width: 70px;
+      left: 45.7%; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    #subway {
+      height: 100px;
+      width: 100px;
+      left: 45%; } }
+  @media (min-width: 1200px) {
+    #subway {
+      height: 110px;
+      width: 110px;
+      left: 46.2%; } }
+
+.food-drink-images {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0;
+  padding: 60px; }
+
+.food-drink-img {
+  display: inline;
+  width: 40%;
+  height: 40%;
+  padding: 0; }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .food-drink-img {
+      height: 40%;
+      width: 30%; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .food-drink-img {
+      height: 40%;
+      width: 30%; } }
+  @media (min-width: 1200px) {
+    .food-drink-img {
+      width: 30%; } }
+
+.img-1 {
+  transform: rotate(-16deg);
+  z-index: 1; }
+
+#ashton-lane {
+  width: 50%; }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    #ashton-lane {
+      width: 40%; } }
+  @media (min-width: 1200px) {
+    #ashton-lane {
+      width: 30%; } }
+
+.img-3 {
+  transform: rotate(17deg); }
+
+.food-drink-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 /*# sourceMappingURL=main.css.map */
