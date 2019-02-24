@@ -29,6 +29,9 @@ body {
 section {
   height: 100%; }
 
+.section-heading {
+  font-size: 4rem; }
+
 .section2 {
   background-color: #f0ebda; }
 
@@ -113,7 +116,7 @@ section {
   align-items: center;
   justify-content: space-around;
   margin: 0;
-  padding: 60px; }
+  padding: 40px 60px 0px 60px; }
 
 .food-drink-img {
   display: inline;
@@ -152,5 +155,13 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center; }
+
+.food-drink-info p {
+  padding: 10px 40px;
+  text-align: center; }
+
+#places-map {
+  width: 350px;
+  height: 200px; }
 
 /*# sourceMappingURL=main.css.map */
