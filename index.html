@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Glasgow | Your Quick Guide</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo|Rubik">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik|Rubik+Mono+One">
     <link rel="stylesheet" href="assets/css/main.css" type="text/css" />
 </head>
 <body>
@@ -19,23 +19,26 @@
         <section class="section1">
             <div class="site-intro-img">
                 <h1 class="site-heading">Glasgow</h1>
-                <img id="subway" src="assets/images/glasgow-images/Glasgow_Subway.png" alt="Glasgow Subway Logo"></img>
+                <!--<img id="subway" src="assets/images/glasgow-images/Glasgow_Subway.png" alt="Glasgow Subway Logo"></img>-->
             </div>
         </section>
             <!--- food and drink section --->
         <section class="section2 food-drink">
-            <div class="food-drink-images">
-                <img class="food-drink-img img-1 img-thumbnail" id="placestoeat" src="assets/images/glasgow-images/flkrplacestoeat.jpg" alt="Eat and Drink in Rogano"></img>
-                <img class="food-drink-img img-2 img-thumbnail" id="ashton-lane" src="assets/images/glasgow-images/ashtonlane.jpg" alt="Eat and Drink in Ashton Lane"></img>
-                <img class="food-drink-img img-3 img-thumbnail" id="alstondrinks" src="assets/images/glasgow-images/alstondrinks.jpg" alt="Eat and Drink in Alston Bar and Grill"></img>
+            <div class="section-heading">
+                <h2>Food and Drink</h2>
             </div>
-                <div class="food-drink-info">
-                    <h2 class="section-heading">Food and Drink</h2>
+            <div class="row">
+                <div class="food-drink-images col-lg-8">
+                    <img class="food-drink-img img-1 img-thumbnail" id="placestoeat" src="assets/images/glasgow-images/flkrplacestoeat.jpg" alt="Eat and Drink in Rogano"></img>
+                    <img class="food-drink-img img-2 img-thumbnail" id="ashton-lane" src="assets/images/glasgow-images/ashtonlane.jpg" alt="Eat and Drink in Ashton Lane"></img>
+                    <img class="food-drink-img img-3 img-thumbnail" id="alstondrinks" src="assets/images/glasgow-images/alstondrinks.jpg" alt="Eat and Drink in Alston Bar and Grill"></img>
+                </div>
+                <div class="food-drink-info col-lg-4">
                     <p>Glasgow has plenty to offer by way of food and drink. <br>Use our map to find some of the best places in town!</p>
                 </div>
-                <div class="food-drink-map">
-                    <div id="places-map"></div>
-                </div>
+            </div>
+            <div class="food-drink-map">
+                <div id="places-map"></div>
             </div>
         </section>
             <!--- events section 
@@ -44,12 +47,16 @@
                 <h2 class="section-heading">Events</h2>
             </div>
         </section>
-            <!--- weather section 
+            <!--- weather section --->
         <section class="section4 weather-img">
             <div class="weather-info">
-                <h2 class="section-heading">Weather</h2>
+                <div class="section-heading">
+                    <h2>Weather</h2>
+                </div>
+                <div id="weather-info" style="height: 300px; width: 80%">
+                </div>
             </div>
-        </section> --->
+        </section> 
     </div>
     
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
@@ -59,9 +66,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.0/TweenMax.min.js"></script>
     <script type="text/javascript" src="assets/js/scrollmagic/scrollmagic.js"></script>
     <script type="text/javascript" src="places-map.js"></script>
-    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe2HULT8uGT_fztl_QSgDlbO9U-NZjvjU&callback=initMap&region=GB" async defer></script>
-    <script type="text/javascript" src="places.json"></script>
+    <script type="text/javascript" src="weather.js"></script>
     
 </body>
 </html>
