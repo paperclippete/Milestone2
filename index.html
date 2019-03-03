@@ -7,6 +7,7 @@
     <title>Glasgow | Your Quick Guide</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik|Rubik+Mono+One">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/main.css" type="text/css" />
 </head>
 <body>
@@ -29,9 +30,9 @@
             </div>
             <div class="row">
                 <div class="food-drink-images col-lg-8">
-                    <img class="food-drink-img img-1 img-thumbnail" id="placestoeat" src="assets/images/glasgow-images/flkrplacestoeat.jpg" alt="Eat and Drink in Rogano"></img>
-                    <img class="food-drink-img img-2 img-thumbnail" id="ashton-lane" src="assets/images/glasgow-images/ashtonlane.jpg" alt="Eat and Drink in Ashton Lane"></img>
-                    <img class="food-drink-img img-3 img-thumbnail" id="alstondrinks" src="assets/images/glasgow-images/alstondrinks.jpg" alt="Eat and Drink in Alston Bar and Grill"></img>
+                    <img class="food-drink-img img-1 img-thumbnail" id="placestoeat" src="assets/images/glasgow-images/flkrplacestoeat.jpg" alt="Eat and Drink in Rogano">
+                    <img class="food-drink-img img-2 img-thumbnail" id="ashton-lane" src="assets/images/glasgow-images/ashtonlane.jpg" alt="Eat and Drink in Ashton Lane">
+                    <img class="food-drink-img img-3 img-thumbnail" id="alstondrinks" src="assets/images/glasgow-images/alstondrinks.jpg" alt="Eat and Drink in Alston Bar and Grill">
                 </div>
                 <div class="food-drink-info col-lg-4">
                     <p>Glasgow has plenty to offer by way of food and drink. <br>Use our map to find some of the best places in town!</p>
@@ -41,24 +42,70 @@
                 <div id="places-map"></div>
             </div>
         </section>
-            <!--- events section 
-        <section class="section3 events-img">
-            <div class="events-info">
-                <h2 class="section-heading">Events</h2>
+            <!--- events section -->
+        <section class="section3 events">
+            <div class="section-heading">
+                <h2>What's on?</h2>
+            </div>
+            <div class="row">
+                <div class="events-images col-lg-8">
+                    <img class="events-img img-1 img-thumbnail" id="muraltrail" src="assets/images/glasgow-images/pxbymural.jpg" alt="Take in the Glasgow Mural Trail">
+                    <img class="events-img img-2 img-thumbnail" id="barrowland" src="assets/images/glasgow-images/barrowland.jpeg" alt="See a concert at The Glasgow Barrowlands">
+                    <img class="events-img img-3 img-thumbnail" id="kelvingrove" src="assets/images/glasgow-images/kelvingrovefaces.jpg" alt="Take in some culture at Kelvingrove Art Gallery">
+
+                </div>
+                <div class="events-info col-lg-4">
+                    <p>Glasgow is a bustling, vibrant city brimming with exciting things to do. <br>Look below for some upcoming events.</p>
+                </div>
+            </div>
+            <div class="events-container">
+                <div id="events-list">
+                    <ul id="search-output">
+                    </ul>
+                </div>
             </div>
         </section>
             <!--- weather section --->
-        <section class="section4 weather-img">
+        <section class="section4 weather">
+            <div class="section-heading">
+                <h2>Weather</h2>
+            </div>
+            <div id="weather-data"></div>
             <div class="weather-info">
-                <div class="section-heading">
-                    <h2>Weather</h2>
+                <div class="weather-comment-img">
+                    <img class="weather-img img-thumbnail" id="wellington" src="assets/images/glasgow-images/flkrwellington.jpg" alt="Duke of Wellington Statue in Royal Exchange Square">
                 </div>
-                <div id="weather-info" style="height: 300px; width: 80%">
+                <div class="weather-comment-speech hidden">
+                    <img class="weather-speech" id="speech-bubble" src="assets/images/weather-images/speech-bubble.png">
+                </div>
+                <div class="weather-comment-text hidden">
+                    <div id="weather-comment"></div>
                 </div>
             </div>
-        </section> 
+        </section>
+        <footer class="footer-info">
+			<div class="footer-row">
+				<h3>Glasgow <img src="assets/images/glasgow-images/cmaxtrafficcone.png"> Your Handy Guide</h3>
+			</div>
+			<div>
+    			<div>
+    				<p>We are a not-for-profit collective of people who love Glasgow!</p>
+    			</div>
+    			<div class="footer-icons">
+    				<p>Click <a href="mailto:support@company.com">here</a> to join our mailing list!</p>
+    			</div>
+    			<hr class="footer-hr">
+    			<div class="footer-icons">
+    			    <a href="#"><i class="fab fa-facebook-square"></i></a>
+    			    <a href="#"><i class="fab fa-twitter-square"></i></a>
+    		        <a href="#"><i class="fab fa-instagram"></i></i></a>
+    			</div>
+    			<div>
+				    <p>A. Gibson &copy; 2019</p>
+			    </div>
+    		</div>
+    	</footer>
     </div>
-    
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -67,6 +114,8 @@
     <script type="text/javascript" src="assets/js/scrollmagic/scrollmagic.js"></script>
     <script type="text/javascript" src="places-map.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe2HULT8uGT_fztl_QSgDlbO9U-NZjvjU&callback=initMap&region=GB" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script type="text/javascript" src="events.js"></script>
     <script type="text/javascript" src="weather.js"></script>
     
 </body>
