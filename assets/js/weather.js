@@ -26,7 +26,7 @@ $(document).ready(function() {
                     maxTemperature
                     };
                 
-                $("#weather-data").html(`<p>The current weather in Glasgow is ${weatherDescription}.<br> The current temperature is ${temperature}. Today's high will be ${maxTemperature}, today's low will be ${minTemperature}.</p>`);
+                $("#weather-data").html(`<p>The current weather in Glasgow is <span id="weatherDescription">${weatherDescription}</span>.<br> The current temperature is ${temperature}. Today's high will be ${maxTemperature}, today's low will be ${minTemperature}.</p>`);
                 }
             }
         );

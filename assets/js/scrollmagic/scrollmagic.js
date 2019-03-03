@@ -10,7 +10,6 @@ $(document).ready(function() {
 			duration: "25%" 
 		})
 		.setPin("#intro", { pushFollowers: true }) //remove pushFollowers?
-		.addIndicators()
 		.addTo(controller);
 	
 	var pinSceneS2 = new ScrollMagic.Scene({
@@ -20,7 +19,6 @@ $(document).ready(function() {
 				reverse: false
 		})
 		.setPin("#s2", { pushFollowers: true }) //remove pushFollowers?
-		.addIndicators()
 		.addTo(controller);
 
 	var pinSceneS3 = new ScrollMagic.Scene({
@@ -30,7 +28,6 @@ $(document).ready(function() {
 				reverse: false
 		})
 		.setPin("#s3", { pushFollowers: true }) //remove pushFollowers?
-		.addIndicators()
 		.addTo(controller);
 
 	var pinSceneS4 = new ScrollMagic.Scene({
@@ -40,7 +37,6 @@ $(document).ready(function() {
 				reverse: false
 		})
 		.setPin("#s4", { pushFollowers: true }) //remove pushFollowers?
-		.addIndicators()
 		.addTo(controller);
 
 
@@ -54,9 +50,6 @@ $(document).ready(function() {
 				reverse: false
 			})
 			.setClassToggle(this, "fade-in") // add class 
-			.addIndicators({
-				
-			})
 			.addTo(controller);
 	});
 

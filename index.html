@@ -12,21 +12,20 @@
 </head>
 <body>
     <nav class="navbar justify-content-end">
-        <button class="btn btn-sm btn-outline-secondary" type="button">ENG</button>
-        <button class="btn btn-sm btn-outline-secondary" type="button">GLA</button>
+        <button class="btn btn-sm btn-outline-secondary" id="ENG" type="button">ENG</button>
+        <button class="btn btn-sm btn-outline-secondary" id="GLA" type="button">GLA</button>
     </nav>
     <!--- landing section --->
     <div class="scroll-section">
         <section class="section1" id="intro">
             <div class="site-intro-img">
                 <h1 class="site-heading">Glasgow</h1>
-                <!--<img id="subway" src="assets/images/glasgow-images/Glasgow_Subway.png" alt="Glasgow Subway Logo"></img>-->
             </div>
         </section>
             <!--- food and drink section --->
         <section class="section2 food-drink fade" id="s2">
             <div class="section-heading">
-                <h2>Food and Drink</h2>
+                <h2 id="food-drink-h">Food and Drink</h2>
             </div>
             <div class="row">
                 <div class="food-drink-images col-lg-8">
@@ -45,7 +44,7 @@
             <!--- events section -->
         <section class="section3 fade events" id="s3">
             <div class="section-heading">
-                <h2>What's on?</h2>
+                <h2 id="events-h">What's on?</h2>
             </div>
             <div class="row">
                 <div class="events-images col-lg-8">
@@ -68,9 +67,10 @@
             <!--- weather section --->
         <section class="section4 fade weather" id="s4">
             <div class="section-heading">
-                <h2>Weather</h2>
+                <h2 id="weather-h">Weather</h2>
             </div>
             <div id="weather-data"></div>
+            <button class="btn btn-md btn-outline-secondary" id="weather-comment-button" type="button">Click Here!</button>
             <div class="weather-info">
                 <div class="weather-comment-img">
                     <img class="weather-img img-thumbnail" id="wellington" src="assets/images/glasgow-images/flkrwellington.jpg" alt="Duke of Wellington Statue in Royal Exchange Square">
@@ -111,11 +111,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.0/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
     <script type="text/javascript" src="assets/js/scrollmagic/scrollmagic.js"></script>
     <script type="text/javascript" src="assets/js/places-map.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe2HULT8uGT_fztl_QSgDlbO9U-NZjvjU&callback=initMap&region=GB" async defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
     <script type="text/javascript" src="assets/js/events.js"></script>
     <script type="text/javascript" src="assets/js/weather.js"></script>
     
