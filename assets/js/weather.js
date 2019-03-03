@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
     const baseURL = "https://api.openweathermap.org/data/2.5/weather?q=Glasgow&APPID=31bfcbea061f0bd7c06d6bbf48bae278";
-    const el = $("#weather-info")
+    const el = $("#weather-data")
     var weather;
     var weatherDescription;
     var weatherIcon;
@@ -26,7 +26,7 @@ $(document).ready(function() {
                     maxTemperature
                     };
                 
-                $("#weather-info").html(`<p>The current weather is ${weatherDescription}<br> current temperature is ${temperature}, today's high ${maxTemperature}, today's low ${minTemperature} </p>`);
+                $("#weather-data").html(`<p>The current weather in Glasgow is ${weatherDescription}.<br> The current temperature is ${temperature}. Today's high will be ${maxTemperature}, today's low will be ${minTemperature}.</p>`);
                 }
             }
         );

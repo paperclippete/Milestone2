@@ -1,3 +1,5 @@
+@import "media";
+
 %background-image {
     background: {
         size: cover;
@@ -9,3 +11,63 @@
     height: 100%;
 }
 
+%box-shadow {
+    -webkit-box-shadow: 10px 10px 20px -7px rgba(77,77,77,1);
+    -moz-box-shadow: 10px 10px 20px -7px rgba(77,77,77,1);
+    box-shadow: 10px 10px 20px -7px rgba(77,77,77,1);
+}
+
+
+
+
+%info-text {
+    padding: 10px;
+        font-size: 0.8rem;
+        @include tablet {
+            font-size: 1rem;    
+        }
+        @include desktop {
+            font-size: 1.2rem;    
+        }
+        @include large-desktop {
+            font-size: 1.4rem;    
+        }
+    }
+
+%responsive-mapbox {
+    width: 90vw;
+    height: 45vh;
+    @include tablet {
+        width: 80vw;
+        height: 40vh;
+    }
+    @include desktop {
+        width: 90vw;
+        height: 55vh;
+    }
+    @include large-desktop {
+        width: 90vw;
+        height: 60vh;
+    }
+    @extend %box-shadow;
+    
+}
+
+%responsive-eventbox {
+    width: 90vw;
+    height: 45vh;
+    @include tablet {
+        width: 80vw;
+        height: 38vh;
+    }
+    @include desktop {
+        width: 90vw;
+        height: 55vh;
+    }
+    @include large-desktop {
+        width: 90vw;
+        height: 55vh;
+    }
+    @extend %box-shadow;
+    
+}

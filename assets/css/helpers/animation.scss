@@ -5,3 +5,43 @@
     50%  { transform: scale(1,1)    translateY(0); }
     100% { transform: scale(1,1)    translateY(0); }
 }
+
+
+
+/*@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px $gwhite, 0 0 20px $gwhite, 0 0 30px $gorange, 0 0 40px $gorange, 0 0 50px $gorange, 0 0 60px $gorange, 0 0 70px $gorange;
+  }
+  to {
+    text-shadow: 0 0 20px $gwhite, 0 0 30px $gflicker, 0 0 40px $gflicker, 0 0 50px $gflicker, 0 0 60px $gflicker, 0 0 70px $gflicker, 0 0 80px $gflicker;
+      
+  }
+}*/
+
+@keyframes flicker {
+    
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      
+        text-shadow:
+            -0.2rem -0.2rem 1rem $gbeige,
+            0.2rem 0.2rem 1rem $gbeige,
+            0 0 2rem $gorange,
+            0 0 4rem $gorange,
+            0 0 6rem $gorange,
+            0 0 8rem $gorange,
+            0 0 10rem $gorange;
+        
+        box-shadow:
+            0 0 .5rem $gbeige,
+            inset 0 0 .5rem $gbeige,
+            0 0 2rem $gorange,
+            inset 0 0 2rem $gorange,
+            0 0 4rem $gorange,
+            inset 0 0 4rem $gorange;        
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+        box-shadow: none;
+    }    
+}

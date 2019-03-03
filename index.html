@@ -17,14 +17,14 @@
     </nav>
     <!--- landing section --->
     <div class="scroll-section">
-        <section class="section1">
+        <section class="section1" id="intro">
             <div class="site-intro-img">
                 <h1 class="site-heading">Glasgow</h1>
                 <!--<img id="subway" src="assets/images/glasgow-images/Glasgow_Subway.png" alt="Glasgow Subway Logo"></img>-->
             </div>
         </section>
             <!--- food and drink section --->
-        <section class="section2 food-drink">
+        <section class="section2 food-drink fade" id="s2">
             <div class="section-heading">
                 <h2>Food and Drink</h2>
             </div>
@@ -43,7 +43,7 @@
             </div>
         </section>
             <!--- events section -->
-        <section class="section3 events">
+        <section class="section3 fade events" id="s3">
             <div class="section-heading">
                 <h2>What's on?</h2>
             </div>
@@ -66,7 +66,7 @@
             </div>
         </section>
             <!--- weather section --->
-        <section class="section4 weather">
+        <section class="section4 fade weather" id="s4">
             <div class="section-heading">
                 <h2>Weather</h2>
             </div>
@@ -111,12 +111,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
     <script type="text/javascript" src="assets/js/scrollmagic/scrollmagic.js"></script>
-    <script type="text/javascript" src="places-map.js"></script>
+    <script type="text/javascript" src="assets/js/places-map.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe2HULT8uGT_fztl_QSgDlbO9U-NZjvjU&callback=initMap&region=GB" async defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script type="text/javascript" src="events.js"></script>
-    <script type="text/javascript" src="weather.js"></script>
+    <script type="text/javascript" src="assets/js/events.js"></script>
+    <script type="text/javascript" src="assets/js/weather.js"></script>
     
 </body>
 </html>

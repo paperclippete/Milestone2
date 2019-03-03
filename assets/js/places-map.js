@@ -104,9 +104,9 @@ function initMap() {
    
     function contentcreator(name) {
         return `<div id="map-content">
-            <p class="iWTitle"><strong>${name.name}</strong><br>Perfect for: "${name.type}"
+            <h4 style="text-align: center"><strong>${name.name}</strong></h4><p>Perfect for: "${name.type}"
             <br>${name.description}
-            <br>Click<a href=${name.website}> here</a> for more info or <a href="tel:${name.phone}">phone</a>.</p>
+            <br>Click<a href=${name.website} target="_blank">here</a> for more info or <a href="tel:${name.phone}">phone</a>.</p>
             </div>`;
     }
 

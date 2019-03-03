@@ -11,23 +11,52 @@ body {
     font-family: "Rubik", sans-serif;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
+#s2,
+#s3,
+#s4 {
+    opacity: 0;
+    transition: all 3s ease-in;
+}
+
+
+
+#s2.fade-in,
+#s3.fade-in,
+#s4.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
 section {
     height: 100%;
+    display: block;
 }
 
 .section-heading {
-    font-size: 3rem;
+    font-size: 1.8rem;
     padding-top: 10px;
     @include desktop {
-        font-size: 4rem;
+        font-size: 2rem;
     }
     @include large-desktop {
-        font-size: 4.5rem;
+        font-size: 3rem;
     }
 }
 
-.section2 {
+.section2,
+.section4 {
+    background-color: $gorange;
+}
+
+.section3 {
     background-color: $gbeige;
+    
 }
 
 .navbar {
@@ -52,11 +81,32 @@ section {
     padding: 0px;
 }
 
+.row {
+    margin: 0px
+}
+
+a {
+    text-decoration: underline;
+    color: $ggrey;
+    &:hover {
+        color: $gyellow;
+    }
+}
+
 ////////////site-heading styles////////////////
 
-.site-heading,
 .section-heading {
-    font-family: "Baloo", sans-serif;
+    font-family: 'Rubik Mono One', sans-serif;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+h2 {
+    .section-heading & {
+        width: 65%;
+    }
 }
 
 
@@ -68,28 +118,31 @@ section {
  
 
 .site-heading {
-    color: $gorange;
-    font-size: 4rem;
+    color: $gbeige;
+    font-size: 3rem;
     text-shadow: 2px 4px 6px $ggrey;
     letter-spacing: 0.6rem;
     margin: 0 auto;
     padding: 10px;
-    width: 100%;
     text-align: center;
+    text-transform: uppercase;
     position: absolute;
     top: 50%;
     left: 50%;
+    border: 0.4rem solid $gbeige;
+    border-radius: 2rem;
     transform: translate(-50%, -50%);
+    animation: flicker 1.5s infinite alternate;
     @include tablet {
-        font-size: 8rem;
+        font-size: 6rem;
         letter-spacing: 0.8rem;
     }
     @include desktop {
-        font-size: 12rem;
+        font-size: 10rem;
         letter-spacing: 1rem;
     }
     @include large-desktop {
-        font-size: 14rem;
+        font-size: 12rem;
         letter-spacing: 1.2rem;
     }
 }
@@ -124,44 +177,40 @@ section {
 
 /////////// food and drink styles ////////////
 
-.food-drink-images {
+.food-drink-images,
+.events-images {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     margin: 0;
-    padding: 50px 60px 0px 60px;
+    padding: 10px;
     
 }
 
-.food-drink-img {
-    display: inline;
-    width: 40%;
-    height: 40%;
+.food-drink-img,
+.events-img {
+    width: 25%;
     padding: 0;
-    @include tablet {
-        height: 30%;
-        width: 30%;
-    }
     @include desktop {
-        height: 30%;
-        width: 30%;
+        width: 27%;
     }
     @include large-desktop {
-        height: 27.5%;
-        width: 27.5%;
+        width: 25.5%;
     }
 }
    
 .img-1 {
-    transform: rotate(-16deg);
+    transform: rotate(-14deg);
     z-index: 1;
+    @extend %box-shadow;
 } 
 
-#ashton-lane {
-    width: 50%;
+#ashton-lane
+    {
+    width: 40%;
     @include tablet {
-        width: 35%;
+        width: 30%;
     }
     @include desktop {
         width: 30%;
@@ -169,55 +218,261 @@ section {
     @include large-desktop {
         width: 32.5%;
     }
+    @extend %box-shadow;
 }
 
 .img-3 {
-    transform: rotate(17deg);
+    transform: rotate(13deg);
+    @extend %box-shadow;
 }
     
-.food-drink-info {
+.food-drink-info,
+.events-info {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+    @include desktop {
+        flex-direction: row;
+        padding-right: 110px;
+    }
+    @include large-desktop {
+        flex-direction: row;
+        padding-right: 110px;
+    }
 }
    
 p {
     .food-drink-info & {
-        padding: 0px 40px;
+        @extend %info-text;
         text-align: center;
-        font-size: 0.9rem;
-        @include tablet {
-            font-size: 1rem;    
-        }
-        @include desktop {
-            font-size: 1.2rem;    
-        }
-        @include large-desktop {
-            font-size: 1.4rem;    
-        }
     }
 }
 
-.food-drink-map {
+.food-drink-map,
+.events-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    @include desktop {
+        padding-top: 40px;
+    }
+    @include large-desktop {
+        padding-top: 40px;
+    }
+    
 }
 
 #places-map {
-    width: 350px;
-    height: 245px;
+    @extend %responsive-mapbox;
+}
+
+div {
+    .gm-style-mtc & {
+        height: 25px !important;
+        font-size: 16px !important;
+        padding: 0px 10px !important;
+    }
+}
+
+.gm-style-iw {
+    max-height: 175px !important;
+    overflow: scroll;
+}
+
+
+/////////// event styles ////////////
+
+
+
+p {
+    .events-info & {
+        @extend %info-text;
+        text-align: center;
+    }
+}
+
+.event-details {
+         @extend %info-text;
+}
+
+.event-title {
+    font-size: 1.1rem;
     @include tablet {
-        width: 660px;
-        height: 210px;
+        font-size: 1.2rem;
     }
     @include desktop {
-        width: 930px;
-        height: 300px;
+        font-size: 1.5rem
     }
     @include large-desktop {
-        width: 1310px;
-        height: 320px;
+        font-size: 1.8rem
     }
+}
+
+
+#muraltrail {
+    transform: rotate(-14deg);
+    z-index: 1;
+    width: 28%;
+    @include tablet {
+        width: 28%;
+    }
+    @include desktop {
+        width: 30%;
+    }
+    @include large-desktop {
+        width: 32.5%;
+    }
+    @extend %box-shadow;
+} 
+
+#barrowland {
+    width: 40%;
+    @include tablet {
+        width: 36%;
+    }
+    @include desktop {
+        width: 40%;
+    }
+    @include large-desktop {
+        width: 42.5%;
+    }
+    @extend %box-shadow;
+}
+
+#kelvingrove {
+    transform: rotate(13deg);
+    @extend %box-shadow;
+    width: 20%;
+    @include tablet {
+        width: 20%;
+    }
+    @include desktop {
+        width: 24%;
+    }
+    @include large-desktop {
+        width: 25%;
+    }
+}
+
+
+#events-list {
+    overflow-y: scroll;
+    @extend %responsive-eventbox;
+    background-color: $gbeige;
+    &::-webkit-scrollbar {
+        width: 6px;
+        background-color: $gbeige;
+        
+    }
+    &::-webkit-scrollbar-button {
+        visibility: hidden;
+    }
+    &::-webkit-scrollbar-thumb {
+        width: 6px;
+        background-color: $gorange;
+    }
+    
+}
+
+
+
+
+
+
+
+/////////// weather styles ////////////
+
+p {
+    #weather-data & {
+        @extend %info-text;
+        
+    }
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 70%;
+}
+
+
+.weather-data {
+    padding-right: 10px;
+    @extend %info-text;
+}
+.weather-img {
+    @extend %box-shadow;
+    transform: rotate(-11deg);
+    margin-top: 50px;
+    
+}
+.weather-comment-img {
+    position: absolute;
+    width: 77%;
+    z-index: auto;
+    top: -9%;
+    left: 13%;
+    @include tablet {
+        width: 69%;
+        top: -7%;
+    
+    }
+    @include desktop {
+        top: 0%;
+    }
+    @include large-desktop {
+        top: 17%;
+    }
+}
+
+.weather-comment-speech {
+    position: absolute;
+    z-index: 1;
+    width: 36%;
+    left: 64%;
+    top: -1%;
+    @include tablet {
+        
+    }
+    @include desktop {
+        left: 53%;
+    }
+    @include large-desktop {
+        left: 40%;
+        top: 0%;
+    }
+}
+
+.weather-comment-text {
+    position: absolute;
+    z-index: 2;
+    left: 71%;
+    top: -1%;
+
+    @include tablet {
+        left: 76%;
+        top: 9%;
+    }
+    @include desktop {
+       left: 65%;
+       top: 10%;
+    }
+    @include large-desktop {
+        left: 53%;
+        top: 17%;
+    }
+}
+
+#weather-comment {
+    width: 80px;
+    height: 80px;
+    background-color: red;
+}
+
+#speech-bubble {
+    width: 90%;
 }

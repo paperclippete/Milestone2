@@ -46,7 +46,7 @@
   @media (min-width: 768px) and (max-width: 991px) {
     #events-list {
       width: 80vw;
-      height: 40vh; } }
+      height: 38vh; } }
   @media (min-width: 992px) and (max-width: 1199px) {
     #events-list {
       width: 90vw;
@@ -127,6 +127,18 @@ body {
 
 .hidden {
   visibility: hidden; }
+
+#s2,
+#s3,
+#s4 {
+  opacity: 0;
+  transition: all 3s ease-in; }
+
+#s2.fade-in,
+#s3.fade-in,
+#s4.fade-in {
+  opacity: 1;
+  transform: translateY(0); }
 
 section {
   height: 100%;
