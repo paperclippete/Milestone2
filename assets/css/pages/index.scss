@@ -36,6 +36,7 @@ body {
 section {
     height: 100%;
     display: block;
+    
 }
 
 .section-heading {
@@ -52,10 +53,12 @@ section {
 .section2,
 .section4 {
     background-color: $gorange;
+    padding-top: 10px;
 }
 
 .section3 {
     background-color: $gbeige;
+    padding-top: 10px;
     
 }
 
@@ -65,16 +68,12 @@ section {
     right: 0px;
 }
 
-.btn {
+.btn-top {
     margin-left: 0.5rem;
-    border-color: $ggrey;
-    color: $ggrey;
     padding: 4px 6px;
-    &:hover {
-        background-color: $ggrey;
-        color: $gorange;
-    }
+    @extend %btn-style;
 }
+
 
 .scroll-section {
     height: 100%;
@@ -114,6 +113,9 @@ h2 {
 .site-intro-img {
     background-image: linear-gradient(rgba(245, 135, 64, 0.1), rgba(245, 135, 64, 0.5)), url("../../assets/images/glasgow-images/flkrfinniestoncrane.jpg");
     @extend %background-image;
+    @include mobile-only {
+       background-image: url("../../assets/images/glasgow-images/flkrfinniestonmobile.jpg"); 
+    }
 }
  
 
@@ -486,4 +488,8 @@ p {
 
 #speech-bubble {
     width: 90%;
+}
+
+#weather-comment-button {
+    margin-left: 10px;
 }

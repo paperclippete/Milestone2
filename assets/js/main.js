@@ -7,7 +7,7 @@ $(document).ready(function() {
     });
     
     $("#ENG").click(function() {
-        $(".site-heading").html("Glesgow");
+        $(".site-heading").html("Glasgow");
         $("#food-drink-h").html("Food and Drink");
         $("#events-h").html("What's On?");
         $("#weather-h").html("Weather");

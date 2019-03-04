@@ -11,6 +11,16 @@
     height: 100%;
 }
 
+%btn-style {
+    border-color: $ggrey;
+    color: $ggrey;
+    &:hover {
+        background-color: $ggrey;
+        color: $gorange;
+    }
+}
+
+
 %box-shadow {
     -webkit-box-shadow: 10px 10px 20px -7px rgba(77,77,77,1);
     -moz-box-shadow: 10px 10px 20px -7px rgba(77,77,77,1);
@@ -43,7 +53,7 @@
     }
     @include desktop {
         width: 90vw;
-        height: 55vh;
+        height: 48vh;
     }
     @include large-desktop {
         width: 90vw;
@@ -62,7 +72,7 @@
     }
     @include desktop {
         width: 90vw;
-        height: 55vh;
+        height: 48vh;
     }
     @include large-desktop {
         width: 90vw;

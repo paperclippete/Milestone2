@@ -2,6 +2,12 @@ $tablet-width: 768px;
 $desktop-width: 992px;
 $large-desktop-width: 1200px;
 
+@mixin mobile-only {
+    @media (max-width: $tablet-width - 1px) {
+        @content;
+    }
+}
+
 @mixin tablet {
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
         @content;

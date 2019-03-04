@@ -6,6 +6,13 @@
   position: relative;
   height: 100%; }
 
+.btn-mod, .btn-top {
+  border-color: #4d4d4d;
+  color: #4d4d4d; }
+  .btn-mod:hover, .btn-top:hover {
+    background-color: #4d4d4d;
+    color: #f57c14; }
+
 #places-map, #events-list, .img-1, #ashton-lane, .img-3, #muraltrail, #barrowland, #kelvingrove, .weather-img {
   -webkit-box-shadow: 10px 10px 20px -7px #4d4d4d;
   -moz-box-shadow: 10px 10px 20px -7px #4d4d4d;
@@ -34,7 +41,7 @@
   @media (min-width: 992px) and (max-width: 1199px) {
     #places-map {
       width: 90vw;
-      height: 55vh; } }
+      height: 48vh; } }
   @media (min-width: 1200px) {
     #places-map {
       width: 90vw;
@@ -50,7 +57,7 @@
   @media (min-width: 992px) and (max-width: 1199px) {
     #events-list {
       width: 90vw;
-      height: 55vh; } }
+      height: 48vh; } }
   @media (min-width: 1200px) {
     #events-list {
       width: 90vw;
@@ -114,7 +121,17 @@
   font-size: 2rem; }
 
 hr {
-  margin: 3px 0; }
+  margin: 10px 0 3px 0; }
+
+.modal-dialog {
+  background-color: #f0ebda; }
+
+.modal-header {
+  background-color: #f57c14; }
+
+#contactForm input, #contactForm
+button {
+  margin: 10px 0; }
 
 html {
   height: 100%; }
@@ -156,24 +173,21 @@ section {
 
 .section2,
 .section4 {
-  background-color: #f57c14; }
+  background-color: #f57c14;
+  padding-top: 10px; }
 
 .section3 {
-  background-color: #f0ebda; }
+  background-color: #f0ebda;
+  padding-top: 10px; }
 
 .navbar {
   position: fixed;
   z-index: 10;
   right: 0px; }
 
-.btn {
+.btn-top {
   margin-left: 0.5rem;
-  border-color: #4d4d4d;
-  color: #4d4d4d;
   padding: 4px 6px; }
-  .btn:hover {
-    background-color: #4d4d4d;
-    color: #f57c14; }
 
 .scroll-section {
   height: 100%;
@@ -200,6 +214,9 @@ a {
 
 .site-intro-img {
   background-image: linear-gradient(rgba(245, 135, 64, 0.1), rgba(245, 135, 64, 0.5)), url("../../assets/images/glasgow-images/flkrfinniestoncrane.jpg"); }
+  @media (max-width: 767px) {
+    .site-intro-img {
+      background-image: url("../../assets/images/glasgow-images/flkrfinniestonmobile.jpg"); } }
 
 .site-heading {
   color: #f0ebda;
@@ -483,5 +500,8 @@ a {
 
 #speech-bubble {
   width: 90%; }
+
+#weather-comment-button {
+  margin-left: 10px; }
 
 /*# sourceMappingURL=main.css.map */
