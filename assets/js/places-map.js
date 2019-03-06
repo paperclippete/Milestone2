@@ -5,7 +5,7 @@ function initMap() {
         zoom: 14
     });
 
-    populatePlaces("assets/places.json", function(text){
+    populatePlaces("assets/js/places.json", function(text){
         var placesList = JSON.parse(text);
         console.log(placesList);
         //debugger;
