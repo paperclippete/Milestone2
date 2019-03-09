@@ -8,13 +8,19 @@ body {
     height: 100%;
     background-image: linear-gradient(rgba(245, 135, 64, 0.1), rgba(245, 135, 64, 0.1)), url("../../assets/images/glasgow-images/flkrfinniestoncrane.jpg");
     @extend %background-image;
-    transform: translate3d(0px, 0px, 0px);
     background-color: $gorange;
     color: $ggrey;
     font-family: "Rubik", sans-serif;
-    
-
+    @include mobile-only {
+        background: {
+        size: 150%, 150vh;
+        attachment: fixed;
+        position: center;
+        repeat: no-repeat;
+        }
+    }
 }
+    
 
 .hidden {
     visibility: hidden;
@@ -28,7 +34,7 @@ body {
 #s3,
 #s4 {
     opacity: 0;
-    transition: all 1s ease-in;
+    transition: all 0.8s ease-in;
 }
 
 
@@ -80,8 +86,11 @@ section {
 .navbar {
     position: fixed;
     z-index: 10;
-    right: 0px;
+    width: 100%;
 }
+
+
+
 
 .btn-top {
     margin-left: 0.5rem;
@@ -100,10 +109,11 @@ section {
 }
 
 a {
-    text-decoration: underline;
-    color: $ggrey;
+    text-decoration: none;
+    color: $gorange;
     &:hover {
-        color: $gorange;
+        color: $ggrey;
+        text-decoration: underline;
     }
 }
 
@@ -111,7 +121,7 @@ a {
 
 .section-heading {
     font-family: 'Rubik Mono One', sans-serif;
-    text-align: left;
+    text-align: center;
     display: flex;
     flex-direction: column;
     padding-left: 10px;
@@ -123,13 +133,6 @@ h2 {
     }
 }
 
-
-
-.site-intro-img {
-    //background-image: linear-gradient(rgba(245, 135, 64, 0.1), rgba(245, 135, 64, 0.5)), url("../../assets/images/glasgow-images/flkrfinniestoncrane.jpg");
-    //@extend %background-image;
-}    
- 
 
 .site-heading {
     color: $gbeige;
