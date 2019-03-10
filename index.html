@@ -4,16 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Glasgow | Your Quick Guide</title>
+    <title>Glasgow | Your Handy Guide</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik|Rubik+Mono+One">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/main.css" type="text/css" />
 </head>
-<body>
-    <nav class="navbar justify-content-end">
-        <button class="btn btn-sm btn-outline-secondary btn-top" id="ENG" type="button">ENG</button>
-        <button class="btn btn-sm btn-outline-secondary btn-top" id="GLA" type="button">GLA</button>
+<body data-spy="scroll" data-target="navbar">
+    <nav class="navbar">
+        <div class="dropdown">
+            <button class="btn btn-outline-secondary btn-menu" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-caret-down"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" id="di-1" href="#intro">Home</a>
+                <a class="dropdown-item" id="di-2" href="#s2">Food and Drink</a>
+                <a class="dropdown-item" id="di-3" href="#s3">What's On?</a>
+                <a class="dropdown-item" id="di-4" href="#s4">Weather</a>
+                <div class="choose-language">
+                    <button class="btn btn-sm btn-outline-secondary btn-top" id="ENG" type="button">ENG</button>
+                    <button class="btn btn-sm btn-outline-secondary btn-top" id="GLA" type="button">GLA</button>
+                </div>
+            </div>
+        </div>
     </nav>
     <!--- landing section --->
     <div class="scroll-section">
@@ -27,14 +40,16 @@
             <div class="section-heading">
                 <h2 id="food-drink-h">Food and Drink</h2>
             </div>
-            <div class="row">
-                <div class="food-drink-images col-lg-8">
-                    <img class="food-drink-img img-1 img-thumbnail" id="placestoeat" src="assets/images/glasgow-images/flkrplacestoeat.jpg" alt="Eat and Drink in Rogano">
-                    <img class="food-drink-img img-2 img-thumbnail" id="ashton-lane" src="assets/images/glasgow-images/ashtonlane.jpg" alt="Eat and Drink in Ashton Lane">
-                    <img class="food-drink-img img-3 img-thumbnail" id="alstondrinks" src="assets/images/glasgow-images/alstondrinks.jpg" alt="Eat and Drink in Alston Bar and Grill">
-                </div>
-                <div class="food-drink-info col-lg-4">
-                    <p>Glasgow has plenty to offer by way of food and drink. <br>Use our map to find some of the best places in town!</p>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-lg-8 food-drink-images">
+                        <img class="food-drink-img img-1 img-thumbnail" id="placestoeat" src="assets/images/glasgow-images/flkrplacestoeat.jpg" alt="Eat and Drink in Rogano">
+                        <img class="food-drink-img img-2 img-thumbnail" id="ashton-lane" src="assets/images/glasgow-images/ashtonlane.jpg" alt="Eat and Drink in Ashton Lane">
+                        <img class="food-drink-img img-3 img-thumbnail" id="alstondrinks" src="assets/images/glasgow-images/alstondrinks.jpg" alt="Eat and Drink in Alston Bar and Grill">
+                    </div>
+                    <div class="col-12 col-lg-4 food-drink-info">
+                        <p>Glasgow has plenty to offer by way of food and drink. <br>Use our map to find some of the best places in town!</p>
+                    </div>
                 </div>
             </div>
             <div class="food-drink-map">
@@ -47,15 +62,16 @@
             <div class="section-heading">
                 <h2 id="events-h">What's on?</h2>
             </div>
-            <div class="row">
-                <div class="events-images col-lg-8">
-                    <img class="events-img img-1 img-thumbnail" id="muraltrail" src="assets/images/glasgow-images/pxbymural.jpg" alt="Take in the Glasgow Mural Trail">
-                    <img class="events-img img-2 img-thumbnail" id="barrowland" src="assets/images/glasgow-images/barrowland.jpeg" alt="See a concert at The Glasgow Barrowlands">
-                    <img class="events-img img-3 img-thumbnail" id="kelvingrove" src="assets/images/glasgow-images/kelvingrovefaces.jpg" alt="Take in some culture at Kelvingrove Art Gallery">
-
-                </div>
-                <div class="events-info col-lg-4">
-                    <p>Glasgow is a bustling, vibrant city brimming with exciting things to do. <br>Look below for some upcoming events.</p>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-lg-8 events-images">
+                        <img class="events-img img-1 img-thumbnail" id="muraltrail" src="assets/images/glasgow-images/pxbymural.jpg" alt="Take in the Glasgow Mural Trail">
+                        <img class="events-img img-2 img-thumbnail" id="barrowland" src="assets/images/glasgow-images/barrowland.jpeg" alt="See a concert at The Glasgow Barrowlands">
+                        <img class="events-img img-3 img-thumbnail" id="kelvingrove" src="assets/images/glasgow-images/kelvingrovefaces.jpg" alt="Take in some culture at Kelvingrove Art Gallery">
+                    </div>
+                    <div class="col-12 col-lg-4 events-info">
+                        <p>Glasgow is a bustling, vibrant city brimming with exciting things to do. <br>Look below for some upcoming events.</p>
+                    </div>
                 </div>
             </div>
             <div class="events-container">
@@ -72,7 +88,6 @@
                 <h2 id="weather-h">Weather</h2>
             </div>
             <div id="weather-data"></div>
-            <button class="btn btn-md btn-outline-secondary btn-mod" id="weather-comment-button" type="button">Click Here!</button>
             <div class="weather-info">
                 <div class="weather-comment-img">
                     <img class="weather-img img-thumbnail" id="wellington" src="assets/images/glasgow-images/flkrwellington.jpg" alt="Duke of Wellington Statue in Royal Exchange Square">
@@ -118,10 +133,11 @@
                 </button>
               </div>
               <div class="modal-body">
-                <form id="contactForm" onsubmit="return sendMail(this);" method="POST">
+                <form id="mailingList" onsubmit="return sendMail(this);" method="POST">
                     <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
                     <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
                     <button type="submit" class="btn btn-outline-secondary center-block btn-mod">Send Request</button>
+                    <p id="email-message"></p>
                 </form>
               </div>
               <div class="modal-footer">
@@ -137,12 +153,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.0/TweenMax.min.js"></script>
     <script type="text/javascript" src="assets/js/scrollmagic/scrollmagic.js"></script>
-    <script type="text/javascript" src="assets/js/places-map.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe2HULT8uGT_fztl_QSgDlbO9U-NZjvjU&callback=initMap&region=GB" async defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
-    <script type="text/javascript" src="assets/js/events.js"></script>
-    <script type="text/javascript" src="assets/js/weather.js"></script>
-    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe2HULT8uGT_fztl_QSgDlbO9U-NZjvjU&callback=initMap&region=GB" async defer></script>
 </body>
 </html>

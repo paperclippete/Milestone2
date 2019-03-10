@@ -14,10 +14,20 @@
 %btn-style {
     border-color: $ggrey;
     color: $ggrey;
+    margin: 0px;
     &:hover {
         background-color: $ggrey;
         color: $gorange;
     }
+    &:active {
+        background-color: $ggrey !important;
+        color: $gorange !important;
+    }
+    &:focus {
+        background-color: $ggrey !important;
+        color: $gorange !important;
+    }
+    
 }
 
 
@@ -46,7 +56,7 @@
 
 %responsive-mapbox {
     width: 90vw;
-    height: 45vh;
+    height: 40vh;
     @include tablet {
         width: 80vw;
         height: 40vh;
@@ -81,3 +91,4 @@
     @extend %box-shadow;
     
 }
+

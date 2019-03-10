@@ -16,3 +16,9 @@ button {
 .btn-mod {
     @extend %btn-style 
 }
+
+#email-message {
+    text-align: center;
+    color: green;
+    font-family: inherit;
+}

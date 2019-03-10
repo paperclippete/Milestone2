@@ -6,34 +6,41 @@ body {
   position: relative;
   height: 100%; }
 
-.btn-mod, .btn-top {
-  border-color: #4d4d4d;
-  color: #4d4d4d; }
-  .btn-mod:hover, .btn-top:hover {
-    background-color: #4d4d4d;
-    color: #f57c14; }
+.btn-mod, .btn-menu, .btn-top {
+  border-color: #1b1b1b;
+  color: #1b1b1b;
+  margin: 0px; }
+  .btn-mod:hover, .btn-menu:hover, .btn-top:hover {
+    background-color: #1b1b1b;
+    color: #d05300; }
+  .btn-mod:active, .btn-menu:active, .btn-top:active {
+    background-color: #1b1b1b !important;
+    color: #d05300 !important; }
+  .btn-mod:focus, .btn-menu:focus, .btn-top:focus {
+    background-color: #1b1b1b !important;
+    color: #d05300 !important; }
 
 #places-map, #events-list, .img-1, #ashton-lane, .img-3, #muraltrail, #barrowland, #kelvingrove, .weather-img {
   -webkit-box-shadow: 10px 10px 20px -7px #4d4d4d;
   -moz-box-shadow: 10px 10px 20px -7px #4d4d4d;
   box-shadow: 10px 10px 20px -7px #4d4d4d; }
 
-.food-drink-info p, .events-info p, .event-details, #weather-data p, .weather-data {
+.dropdown-menu, .food-drink-info p, .events-info p, .event-details, #weather-data p, .weather-data {
   padding: 10px;
   font-size: 0.8rem; }
   @media (min-width: 768px) and (max-width: 991px) {
-    .food-drink-info p, .events-info p, .event-details, #weather-data p, .weather-data {
+    .dropdown-menu, .food-drink-info p, .events-info p, .event-details, #weather-data p, .weather-data {
       font-size: 1rem; } }
   @media (min-width: 992px) and (max-width: 1199px) {
-    .food-drink-info p, .events-info p, .event-details, #weather-data p, .weather-data {
+    .dropdown-menu, .food-drink-info p, .events-info p, .event-details, #weather-data p, .weather-data {
       font-size: 1.2rem; } }
   @media (min-width: 1200px) {
-    .food-drink-info p, .events-info p, .event-details, #weather-data p, .weather-data {
+    .dropdown-menu, .food-drink-info p, .events-info p, .event-details, #weather-data p, .weather-data {
       font-size: 1.4rem; } }
 
 #places-map {
   width: 90vw;
-  height: 45vh; }
+  height: 40vh; }
   @media (min-width: 768px) and (max-width: 991px) {
     #places-map {
       width: 80vw;
@@ -63,30 +70,10 @@ body {
       width: 90vw;
       height: 45vh; } }
 
-@keyframes bounce {
-  0% {
-    transform: scale(1, 1) translateY(0); }
-  10% {
-    transform: scale(1.1, 0.9) translateY(0); }
-  30% {
-    transform: scale(0.9, 1.1) translateY(-100px); }
-  50% {
-    transform: scale(1, 1) translateY(0); }
-  100% {
-    transform: scale(1, 1) translateY(0); } }
-/*@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px $gwhite, 0 0 20px $gwhite, 0 0 30px $gorange, 0 0 40px $gorange, 0 0 50px $gorange, 0 0 60px $gorange, 0 0 70px $gorange;
-  }
-  to {
-    text-shadow: 0 0 20px $gwhite, 0 0 30px $gflicker, 0 0 40px $gflicker, 0 0 50px $gflicker, 0 0 60px $gflicker, 0 0 70px $gflicker, 0 0 80px $gflicker;
-      
-  }
-}*/
 @keyframes flicker {
   0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    text-shadow: -0.2rem -0.2rem 1rem #f0ebda, 0.2rem 0.2rem 1rem #f0ebda, 0 0 2rem #f57c14, 0 0 4rem #f57c14, 0 0 6rem #f57c14, 0 0 8rem #f57c14, 0 0 10rem #f57c14;
-    box-shadow: 0 0 0.5rem #f0ebda, inset 0 0 0.5rem #f0ebda, 0 0 2rem #f57c14, inset 0 0 2rem #f57c14, 0 0 4rem #f57c14, inset 0 0 4rem #f57c14; }
+    text-shadow: -0.2rem -0.2rem 1rem #f0ebda, 0.2rem 0.2rem 1rem #f0ebda, 0 0 2rem #d05300, 0 0 4rem #d05300, 0 0 6rem #d05300, 0 0 8rem #d05300, 0 0 10rem #d05300;
+    box-shadow: 0 0 0.5rem #f0ebda, inset 0 0 0.5rem #f0ebda, 0 0 2rem #d05300, inset 0 0 2rem #d05300, 0 0 4rem #d05300, inset 0 0 4rem #d05300; }
   20%, 24%, 55% {
     text-shadow: none;
     box-shadow: none; } }
@@ -118,10 +105,12 @@ body {
       font-size: 1.2rem; } }
 
 .footer-icons i {
-  color: #ffcc20;
+  color: #d05300;
   margin: 0px 12px;
   padding: 0;
   font-size: 2rem; }
+  .footer-icons i:hover {
+    color: #1b1b1b; }
 
 hr {
   margin: 10px 0 3px 0; }
@@ -130,11 +119,16 @@ hr {
   background-color: #f0ebda; }
 
 .modal-header {
-  background-color: #f57c14; }
+  background-color: #d05300; }
 
 #contactForm input, #contactForm
 button {
   margin: 10px 0; }
+
+#email-message {
+  text-align: center;
+  color: green;
+  font-family: inherit; }
 
 html {
   height: 100%; }
@@ -142,9 +136,15 @@ html {
 body {
   height: 100%;
   background-image: linear-gradient(rgba(245, 135, 64, 0.1), rgba(245, 135, 64, 0.1)), url("../../assets/images/glasgow-images/flkrfinniestoncrane.jpg");
-  background-color: #f57c14;
-  color: #4d4d4d;
+  background-color: #d05300;
+  color: #1b1b1b;
   font-family: "Rubik", sans-serif; }
+  @media (max-width: 767px) {
+    body {
+      background-size: 100%, 206vh;
+      background-attachment: unset;
+      background-position: top;
+      background-repeat: repeat-y; } }
 
 .hidden {
   visibility: hidden; }
@@ -156,7 +156,7 @@ body {
 #s3,
 #s4 {
   opacity: 0;
-  transition: all 1.5s ease-in; }
+  transition: all 0.8s ease-in; }
 
 #s2.fade-in,
 #s3.fade-in,
@@ -180,27 +180,37 @@ section {
 
 .section2,
 .section4 {
-  background-color: #f57c14;
+  background-color: #d05300;
   padding-top: 10px;
-  -webkit-box-shadow: 0px 0px 21px 2px rgba(245, 124, 20, 0.75);
-  -moz-box-shadow: 0px 0px 21px 2px rgba(245, 124, 20, 0.75);
-  box-shadow: 0px 0px 21px 2px rgba(245, 124, 20, 0.75); }
+  -webkit-box-shadow: 0px 0px 15px 20px #d05300;
+  -moz-box-shadow: 0px 0px 15px 20px #d05300;
+  box-shadow: 0px 0px 15 20px #d05300; }
 
 .section3 {
   background-color: #f0ebda;
   padding-top: 10px;
-  -webkit-box-shadow: 0px 0px 21px 2px rgba(240, 235, 218, 0.75);
-  -moz-box-shadow: 0px 0px 21px 2px rgba(240, 235, 218, 0.75);
-  box-shadow: 0px 0px 21px 2px rgba(240, 235, 218, 0.75); }
+  -webkit-box-shadow: 0px 0px 15px 20px #f0ebda;
+  -moz-box-shadow: 0px 0px 15px 20px #f0ebda;
+  box-shadow: 0px 0px 15px 20px #f0ebda; }
 
 .navbar {
   position: fixed;
   z-index: 10;
-  right: 0px; }
+  width: 100%; }
 
-.btn-top {
-  margin-left: 0.5rem;
-  padding: 4px 6px; }
+.dropdown-menu {
+  color: inherit;
+  background-color: #f0ebda; }
+
+.btn-menu {
+  margin: 0;
+  padding: 4px 12px; }
+
+.choose-language {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 24px; }
 
 .scroll-section {
   height: 100%;
@@ -210,25 +220,25 @@ section {
   margin: 0px; }
 
 a {
-  text-decoration: underline;
-  color: #4d4d4d; }
+  text-decoration: none;
+  color: #d05300; }
   a:hover {
-    color: #ffcc20; }
+    color: #1b1b1b;
+    text-decoration: underline; }
 
 .section-heading {
   font-family: 'Rubik Mono One', sans-serif;
-  text-align: left;
+  text-align: center;
   display: flex;
   flex-direction: column;
   padding-left: 10px; }
 
 .section-heading h2 {
-  width: 65%; }
+  width: 100%; }
 
 .site-heading {
   color: #f0ebda;
   font-size: 3rem;
-  text-shadow: 2px 4px 6px #4d4d4d;
   letter-spacing: 0.6rem;
   margin: 0 auto;
   padding: 10px;
@@ -253,30 +263,6 @@ a {
     .site-heading {
       font-size: 12rem;
       letter-spacing: 1.2rem; } }
-
-#subway {
-  position: absolute;
-  bottom: 5%;
-  animation-name: bounce;
-  animation-duration: 3s;
-  height: 45px;
-  width: 45px;
-  left: 44%; }
-  @media (min-width: 768px) and (max-width: 991px) {
-    #subway {
-      height: 70px;
-      width: 70px;
-      left: 45.7%; } }
-  @media (min-width: 992px) and (max-width: 1199px) {
-    #subway {
-      height: 100px;
-      width: 100px;
-      left: 45%; } }
-  @media (min-width: 1200px) {
-    #subway {
-      height: 110px;
-      width: 110px;
-      left: 46.2%; } }
 
 .food-drink-images,
 .events-images {
@@ -426,7 +412,10 @@ a {
     visibility: hidden; }
   #events-list::-webkit-scrollbar-thumb {
     width: 6px;
-    background-color: #f57c14; }
+    background-color: #d05300; }
+
+#weather-data p {
+  text-align: center; }
 
 .weather-info {
   display: flex;
@@ -477,11 +466,11 @@ a {
 .weather-comment-text {
   position: absolute;
   z-index: 2;
-  left: 71%;
-  top: 3%; }
+  left: 69%;
+  top: 4%; }
   @media (min-width: 768px) and (max-width: 991px) {
     .weather-comment-text {
-      left: 70%;
+      left: 69%;
       top: 9%; } }
   @media (min-width: 992px) and (max-width: 1199px) {
     .weather-comment-text {
@@ -489,21 +478,22 @@ a {
       top: 10%; } }
   @media (min-width: 1200px) {
     .weather-comment-text {
-      left: 44%;
+      left: 45.5%;
       top: 10%; } }
 
 #weather-comment {
-  font-size: 0.8rem;
-  width: 73%; }
+  font-size: 0.9rem;
+  width: 100%;
+  text-align: center; }
   @media (min-width: 768px) and (max-width: 991px) {
     #weather-comment {
-      font-size: 1.2rem; } }
+      font-size: 1.8rem; } }
   @media (min-width: 992px) and (max-width: 1199px) {
     #weather-comment {
-      font-size: 1.8rem; } }
+      font-size: 2.3rem; } }
   @media (min-width: 1200px) {
     #weather-comment {
-      font-size: 2.8rem; } }
+      font-size: 3rem; } }
 
 #speech-bubble {
   width: 90%; }

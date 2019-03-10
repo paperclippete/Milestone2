@@ -37,10 +37,13 @@ p {
 
 i {
 	.footer-icons & {
-		color:  $gyellow;
+		color:  $gorange;
 		margin: 0px 12px;
 		padding: 0;
 		font-size: 2rem;
+		&:hover {
+			color:  $ggrey;	
+		}
 	}
 }
 
