@@ -1,4 +1,4 @@
-# Glasgow ![Traffic Cone](assets/images/glasgow-images/cmaxtrafficcone1.png) Your Handy Guide
+# Glasgow ![Traffic Cone](assets/images/glasgow-images/cmaxtrafficcone.1.png) Your Handy Guide
 ___
 Welcome to Glasgow | Your Handy Guide. 
 
