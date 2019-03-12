@@ -1,5 +1,5 @@
 # Glasgow ![Traffic Cone](assets/images/glasgow-images/cmaxtrafficcone.1.png) Your Handy Guide
-___
+
 Welcome to Glasgow | Your Handy Guide. 
 
 This is exactly what it says on the tin! It's a quick and easy way for users to find the best Glasgow has to offer, quickly!
@@ -124,7 +124,10 @@ I used jQuery to make a scroll to top button that appears near the bottom of the
 #### Features for the Future
 
 It may be appropriate to embed social media feeds into the website in order to provide a user-created and interactive aspect. It would help showcase landmarks, past events and holiday snaps which could generate a buzz for future tourism.
+
 It would be worthwhile to look at integrating more APIs, to provide travel and accomodation information, in meet more user needs from the one site.
+
+After testing, it might be an option to toggle the geolocation saving someone having to scroll from their location all the way to Glasgow.
 
 
 #### Technologies Used
@@ -154,45 +157,91 @@ It would be worthwhile to look at integrating more APIs, to provide travel and a
 ### Testing
 ___
 
+#### Manual and Automated Testing
+
 Throughout the process I continually manually tested the site, by saving my work in the IDE and running it in Google Chrome. I used Google Developer Tools to ensure that my site was responsive and functioned in all screen sizes and that my styling was applied throughout. 
-I set ```console.logs``` and ```debugger``` statements throughout my js files in order to debug through the console. This was useful in finding objects and navigating arrays located in JSON files from the APIs.
 
+I set ```console.logs``` and ```debugger``` statements throughout my js files in order to debug through the console. This was particularly useful in finding objects and navigating arrays located in JSON files from the APIs.
 
+I downloaded [Jasmine](https://jasmine.github.io/index.html) but decided that I did not necessarily require this type of testing.
 
-
-
-
-
-*It*alics
-
-**bold**
-
----
-
-> This is a quote
-
-
-
-* Item 1
-    * Nested Item
-    * 
-    * 
-
-1. List
-2. List
-3. 
-
-
+I used jQuery to manipulate the DOM in the console to test the code for the 'weather-comment' like this...
 
 ```bash
-github/commands
+>$("#weatherDescription")[0].innerText
+<"Rain"
+>$("#weatherDescription").html("Snow")
+>"Snow"
 ```
+This returned the expected result - "Baltic! Pull a Sickie!"
 
-```javascript
-function (num 1, num 2)
-```
+#### Testing User Stories
 
-| Name      | Email       |
-| ----------|-------------|
-|Alexa      | blah@blah.com |
-|Table      |table@table.com |
+* I've never been to Glasgow before and want to research my trip before leaving home 
+    1. I'm looking for 'local' places recommended by Glaswegians
+        Navigate to site
+        Scroll down to 'Food and Drink'
+        As map is set up to show my current location I will need to scroll map to Glasgow (potential issue!)
+        I can now see several markers, if I click on a marker it gives me details about the location and links with the website/ telephone number for booking
+    2. I'd like to see the current, live weather information so I know to take some waterproof clothes
+        I navigate to site
+        I use the menu button to navigate to 'Weather'
+        I can read the weather information presented on the page
+    3. I'd like to know events that are currently on and use this information to enhance my stay
+        I navigate to the site
+        I scroll down to 'What's On?'
+        I look at the information provided in the scrolling box
+        I can see lots of events which appear to be ordered by date
+        I can read the title, see the location, see the time and date of the event, see the price and find out more via the link
+    
+* I'm currently visiting Glasgow and want to know where to go and what to do 
+    1. I would like to know locally recommended places to eat or drink, near my location
+        I navigate to the site and scroll to 'Food and Drink'
+        I can see my current location on the map, marked "You're Here!"
+        I click the closest marker and find out about a nice place to eat round the corner from where I am
+
+#### Responsiveness
+
+I tested my project throughout development using Google Developer Tools to check the site was responsive. I continually made adjustments to my media-queries in CSS to ensure it looked good at all screen-widths, however I realised my laptop had a different screen size to the standard. I began to investigate a range of screen sizes and realised the best option was just to make it as responsive as I possibly could!
+There was an interesting (and frustrating) bug with Safari on iPhone - the background image was very large and did not fit to the screen, all that could be seen was clouds. However, I appear to have fixed this by including a media-query for mobile-only.
+
+#### Bugs
+
+There have been several issues throughout development with my JS code breaking, I worked hard using console.logs and debuggers to pinpoint errors and fix them. There shouldn't be any errors displaying in the console.
+
+There is a well-known issue with Safari for iPhone displaying parallax backgrounds, I have looked into this but have decided to compromise my design for the smallest screens.
+
+### Deployment
+___
+
+I saved my work regularly on the IDE Cloud 9. I also committed my code to GitHub at regular intervals. I feel that I could have relied more heavily on git commits as I know it provides version control. I feel that my commit messages were specific and informing.
+
+In order to deploy my work I opened the terminal within Cloud 9.
+
+I initialised and set up a local git repository with the command ```bash git init ```
+
+I added files to my git repo with the command ```bash git add (specific file location or . for all files) ```
+
+I then commited files to the local repo with ```bash git commit``` and wrote a message after -m that would be useful in either complex projects or when working collaboratively.
+
+In order to commit my code to a remote repository I had to create a new project on GitHub
+
+I then typed into the terminal ```bash git remote add origin``` followed by ```bash https://github.com/paperclippete/milestone2```
+
+I would then use ```bash git push -u``` to push my code to my master branch as I was only using one branch. I did not feel that my project was complex enough to create another branch, however I did spend time familiarising myself with this.
+
+In GitHub I then published my master branch to GitHub pages, this is my deployed version. 
+
+**The difference between the deployed version and the development version will be that I'm using a minified CSS file whereas I used SASS to compile my styling during development.**
+
+### Credits
+___
+
+#### Content
+All of the text content on the website was my own. The descriptions of food and drink locations in Glasgow was sourced from their own websites.
+
+#### Media
+The images displayed in this site were either my own or sourced from the sites listed above. All images are for educational purposes only.
+
+#### Acknowledgements
+I received inspiration for this project from the best city in the world... Glasgow!
