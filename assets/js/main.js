@@ -72,7 +72,7 @@ function initMap() {
         var placesList = JSON.parse(text);
         
     
-        placesList.places.forEach( function(eachPlace) {
+        placesList.places.forEach(function(eachPlace) {
             
             
             var lat = eachPlace.position.lat;
@@ -167,7 +167,7 @@ function initMap() {
         return `<div id="map-content">
             <h4 style="text-align: center"><strong>${name.name}</strong></h4><p>Perfect for: "${name.type}"
             <br>${name.description}
-            <br>Click<a href=${name.website} target="_blank">here</a> for more info or <a href="tel:${name.phone}">phone</a>.</p>
+            <br>Click <a href=${name.website} target="_blank">here</a> for more info or <a href="tel:${name.phone}">phone</a>.</p>
             </div>`;
     }
 
@@ -186,6 +186,7 @@ function eventsData() {
 	headers.set('Authorization', 'Bearer '+apiKey);
 	fetch('https://api.list.co.uk/v1/events?location=glasgow&order=ts', { headers: headers })
 		.then(function(response) { 
+		    
 		    return response.json(); 
 		    
 		})
@@ -202,7 +203,7 @@ function eventsData() {
 				var li = document.createElement('li');
 				
 				eventInfo = document.createElement('div');
-				//debugger;
+				
 				eventInfo.innerHTML = `<h3 class="event-title">${result.name}</h3>
 				                            <p class="event-details"> @ ${result.schedules[0].place.name} <br>
 				                            This event is on ${eventTime} and is ${result.schedules[0].ticket_summary}. <br>
@@ -227,7 +228,6 @@ $(document).ready(function() {
     const el = $("#weather-data")
     var weather;
     var weatherDescription;
-    var weatherIcon;
     var temperature;
     var minTemperature;
     var maxTemperature;
