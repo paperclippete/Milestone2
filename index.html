@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik|Rubik+Mono+One">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/style.min.css" type="text/css" />
 </head>
+
 <body data-spy="scroll" data-target="navbar">
     <nav class="navbar">
         <div class="dropdown">
@@ -35,7 +37,7 @@
                 <h1 class="site-heading">Glasgow</h1>
             </div>
         </section>
-            <!--- food and drink section --->
+        <!--- food and drink section --->
         <section class="section2 food-drink fade" id="s2">
             <div class="section-heading">
                 <h2 id="food-drink-h">Food and Drink</h2>
@@ -57,7 +59,7 @@
             </div>
         </section>
         <div class="breaker"></div>
-            <!--- events section -->
+        <!--- events section -->
         <section class="section3 fade events" id="s3">
             <div class="section-heading">
                 <h2 id="events-h">What's on?</h2>
@@ -82,7 +84,7 @@
             </div>
         </section>
         <div class="breaker"></div>
-            <!--- weather section --->
+        <!--- weather section --->
         <section class="section4 fade weather" id="s4">
             <div class="section-heading">
                 <h2 id="weather-h">Weather</h2>
@@ -93,69 +95,75 @@
                     <img class="weather-img img-thumbnail" id="wellington" src="assets/images/glasgow-images/flkrwellington.jpg" alt="Duke of Wellington Statue in Royal Exchange Square">
                 </div>
                 <div class="weather-comment-speech hidden">
-                    <img class="weather-speech" id="speech-bubble" src="assets/images/weather-images/speech-bubble.png">
+                    <img class="weather-speech" id="speech-bubble" src="assets/images/glasgow-images/speech-bubble.png" alt="Wellington's horse comments on the weather!">
                 </div>
                 <div class="weather-comment-text hidden">
                     <div id="weather-comment"></div>
                 </div>
             </div>
+            <div class="top-button">
+                <button class="btn btn-outline-secondary btn-menu" id="btn-to-top" type="button">
+                    <i class="fas fa-caret-up"></i><br>TOP
+                </button>
+            </div>
         </section>
         <div class="breaker"></div>
         <!--- Footer --->
         <footer class="footer-info">
-			<div class="footer-row">
-				<h3>Glasgow <img src="assets/images/glasgow-images/cmaxtrafficcone.png"> Your Handy Guide</h3>
-			</div>
-			<div>
-			    <p>We are a not-for-profit collective of people who love Glasgow!</p>   
-			</div>
-    		<div class="footer-icons">
-    			<button type="button" class="btn btn-md btn-outline-secondary btn-mod" data-toggle="modal" data-target="#subscribeModal">Subscribe to our Mailing List</button>
-    		</div>
-    		<hr class="footer-hr">
-    		<div class="footer-icons">
-    			<a href="#"><i class="fab fa-facebook-square"></i></a>
-    			<a href="#"><i class="fab fa-twitter-square"></i></a>
-    		    <a href="#"><i class="fab fa-instagram"></i></i></a>
-    		</div>
-    		<div>
-			    <p>A. Gibson &copy; 2019</p>
-			</div>
-    	</footer>
-    	<!--- Subscribe Modal --->
-    	<div class="modal fade" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="subscribeModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Subscribe to our Mailing List</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <div class="footer-row">
+                <h3>Glasgow <img src="assets/images/glasgow-images/cmaxtrafficcone.png" alt="Wellington's special Glasgow Hat!"> Your Handy Guide</h3>
+            </div>
+            <div>
+                <p>We are a not-for-profit collective of people who love Glasgow!</p>
+            </div>
+            <div class="footer-icons">
+                <button type="button" class="btn btn-md btn-outline-secondary btn-mod" data-toggle="modal" data-target="#subscribeModal">Subscribe to our Mailing List</button>
+            </div>
+            <hr class="footer-hr">
+            <div class="footer-icons">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div>
+                <p>A. Gibson &copy; 2019</p>
+            </div>
+        </footer>
+        <!--- Subscribe Modal --->
+        <div class="modal fade" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="subscribeModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Subscribe to our Mailing List</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
-              </div>
-              <div class="modal-body">
-                <form id="mailingList" onsubmit="return sendMail(this);" method="POST">
-                    <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
-                    <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
-                    <button type="submit" class="btn btn-outline-secondary center-block btn-mod">Send Request</button>
-                    <p id="email-message"></p>
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-outline-secondary btn-mod" data-dismiss="modal">Close</button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="mailingList" onsubmit="return sendMail(this);" method="POST">
+                            <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
+                            <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
+                            <button type="submit" class="btn btn-outline-secondary center-block btn-mod">Send Request</button>
+                            <p id="email-message"></p>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary btn-mod" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
-          </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.0/TweenMax.min.js"></script>
-    <script type="text/javascript" src="assets/js/scrollmagic/scrollmagic.js"></script>
+    <script src="assets/js/scrollmagic/scrollmagic.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script src="assets/js/main.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe2HULT8uGT_fztl_QSgDlbO9U-NZjvjU&callback=initMap&region=GB" async defer></script>
 </body>
+
 </html>

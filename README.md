@@ -137,6 +137,7 @@ It would be worthwhile to look at integrating more APIs, to provide travel and a
 * [GitHub](https://github.com) - I used this to push my git files and used [Git Hub Pages](https://pages.github.com/) to deploy my site.
 * [jQuery](https://jquery.com/) - JavaScript library used to connect with APIs and custom-code for the site which allows for DOM manipulation
 * [SASS](https://sass-lang.com/) - used as a preprocessor in creating style files with variables, media queries and mixins
+* [CSS Minifier](https://cssminifier.com/) - used to minify my CSS data for deployment
 * [Bootstrap 4](https://getbootstrap.com/) - used for responsive layout, basic styling, dropdown Navbar, mailing-list modal (JavaScript for these features was used - linked to Bootstrap 4 and, through BS4, popper.js in <script> tags)
 * [Google Fonts](https://fonts.google.com/) - used for customised fonts
 * [Font Awesome 5](https://fontawesome.com/) - used for links and icons to make the site more appealing
@@ -147,7 +148,7 @@ It would be worthwhile to look at integrating more APIs, to provide travel and a
 * [The List API](https://api.list.co.uk/) - connected with this API to give up-to-date events information (through this I used FetchAPI)
 * [Open Weather Map](https://openweathermap.org/) - connected with this API to give current, localised weather information
 * [Pixabay.com](https://www.flickr.com/), [Flikr.com](https://www.flickr.com/) and [ClipartMax.com](https://www.clipartmax.com/) used for stock images (for the educational purposes of this project only) and [TinyPNG.com](https://tinypng.com/) used for image compression
-
+* [W3C Validator](https://validator.w3.org/) - HTML Validator, [W3C CSS Validator](https://jigsaw.w3.org/css-validator/), [Esprima](esprima.org) - JS Validator
 * Google Developer Tools, Stack-Overflow, Code-Institue Slack Community, Code-Institute module notes, W3Schools, CSS Tricks - all used for reference when I encountered a bug or needed extra support with any issues.
 
 ### Testing

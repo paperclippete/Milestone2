@@ -42,6 +42,21 @@ $(document).ready(function() {
         }
         else $("#weather-comment").html("This weather's mental!")
     });
+    
+    
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 100) {
+            $('#btn-to-top').fadeIn();
+        } else {
+            $('#btn-to-top').fadeOut();
+        }
+    });
+
+    
+    $('#btn-to-top').click(function(){
+        $('html, body').animate({scrollTop : 0},800);
+        return false;
+    });
 });
 
 // code for maps
