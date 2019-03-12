@@ -10,6 +10,14 @@ When planning a city break I often find it difficult to know where to look for '
 
 View the deployed site [here](https://paperclippete.github.io/milestone2/)
 
+| Contents  |
+|-----------|
+|[UX](#UX) |
+|[Features](#Features)|
+|[Testing](#Testing)|
+|[Deployment](#Deployment)|
+|[Credits](#Credits)|
+
 ### UX
 ___
 
@@ -179,25 +187,40 @@ This returned the expected result - "Baltic! Pull a Sickie!"
 
 * I've never been to Glasgow before and want to research my trip before leaving home 
     1. I'm looking for 'local' places recommended by Glaswegians
+        
         Navigate to site
+        
         Scroll down to 'Food and Drink'
+        
         As map is set up to show my current location I will need to scroll map to Glasgow (potential issue!)
+        
         I can now see several markers, if I click on a marker it gives me details about the location and links with the website/ telephone number for booking
     2. I'd like to see the current, live weather information so I know to take some waterproof clothes
+        
         I navigate to site
+        
         I use the menu button to navigate to 'Weather'
+        
         I can read the weather information presented on the page
     3. I'd like to know events that are currently on and use this information to enhance my stay
+        
         I navigate to the site
+        
         I scroll down to 'What's On?'
+        
         I look at the information provided in the scrolling box
+        
         I can see lots of events which appear to be ordered by date
+        
         I can read the title, see the location, see the time and date of the event, see the price and find out more via the link
     
 * I'm currently visiting Glasgow and want to know where to go and what to do 
     1. I would like to know locally recommended places to eat or drink, near my location
+        
         I navigate to the site and scroll to 'Food and Drink'
+        
         I can see my current location on the map, marked "You're Here!"
+        
         I click the closest marker and find out about a nice place to eat round the corner from where I am
 
 #### Responsiveness
@@ -218,17 +241,17 @@ I saved my work regularly on the IDE Cloud 9. I also committed my code to GitHub
 
 In order to deploy my work I opened the terminal within Cloud 9.
 
-I initialised and set up a local git repository with the command ```bash git init ```
+I initialised and set up a local git repository with the command ``` git init ```
 
-I added files to my git repo with the command ```bash git add (specific file location or . for all files) ```
+I added files to my git repo with the command ``` git add (specific file location or . for all files) ```
 
-I then commited files to the local repo with ```bash git commit``` and wrote a message after -m that would be useful in either complex projects or when working collaboratively.
+I then commited files to the local repo with ``` git commit``` and wrote a message after -m that would be useful in either complex projects or when working collaboratively.
 
 In order to commit my code to a remote repository I had to create a new project on GitHub
 
-I then typed into the terminal ```bash git remote add origin``` followed by ```bash https://github.com/paperclippete/milestone2```
+I then typed into the terminal ``` git remote add origin``` followed by ``` https://github.com/paperclippete/milestone2```
 
-I would then use ```bash git push -u``` to push my code to my master branch as I was only using one branch. I did not feel that my project was complex enough to create another branch, however I did spend time familiarising myself with this.
+I would then use ``` git push -u``` to push my code to my master branch as I was only using one branch. I did not feel that my project was complex enough to create another branch, however I did spend time familiarising myself with this.
 
 In GitHub I then published my master branch to GitHub pages, this is my deployed version. 
 
