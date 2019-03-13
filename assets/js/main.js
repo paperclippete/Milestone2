@@ -65,7 +65,8 @@ function initMap() {
     
     map = new google.maps.Map(document.getElementById('places-map'), {
         center: {lat: 55.863637, lng: -4.254477}, 
-        zoom: 14
+        zoom: 14,
+        mapTypeControl: false
     });
 
     populatePlaces("assets/js/places.json", function(text){
