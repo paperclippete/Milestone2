@@ -45,7 +45,7 @@ $(document).ready(function() {
     
     
     $(window).scroll(function(){
-        if ($(this).scrollTop() > 100) {
+        if ($(this).scrollTop() > 800) {
             $('#btn-to-top').fadeIn();
         } else {
             $('#btn-to-top').fadeOut();
@@ -196,20 +196,37 @@ function eventsData() {
 				
 			ul.innerHTML = '';
 			data.forEach(function(result) {
-			    	
+			       	
 				var rawTime = result.schedules[0].performances[0].ts;
 				var eventTime = moment(rawTime).format("Do MMMM YYYY, h:mm a");
 				
 				var li = document.createElement('li');
 				
+				var resultId = result.list_id;
+				var name = result.name;
+				var eventDetails = result.schedules[0].place.name;
+				var price = function() {
+				    var priceSuccess = result.schedules[0].ticket_summary; 
+				    var priceError = "unknown, click above for more details";
+				    
+				    if (result.schedules[0].ticket_summary === undefined) {
+				        return priceError;
+				    } else {
+				        return priceSuccess;
+				    }    
+				};
+				
+				
 				eventInfo = document.createElement('div');
 				
-				eventInfo.innerHTML = `<h3 class="event-title">${result.name}</h3>
-				                            <p class="event-details"> @ ${result.schedules[0].place.name} <br>
-				                            This event is on ${eventTime} and is ${result.schedules[0].ticket_summary}. <br>
-				                            Click <a href="https://www.list.co.uk/event/${result.list_id}" target="_blank">here</a> for more info.<p>`;
+				eventInfo.innerHTML = `<a href="https://www.list.co.uk/event/${resultId}" target="_blank"><h3 class="event-title">${name}</h3></a>
+				                            <p class="event-details"> @ ${eventDetails} <br>
+				                            This event is on ${eventTime} and the price is ${price()}.</p>`;
 				li.appendChild(eventInfo);
 				ul.appendChild(li);
+				
+				
+				
 			});
 	    });
 		    
@@ -264,6 +281,7 @@ function sendMail(mailingList) {
         "from_name": mailingList.name.value,
         "from_email": mailingList.emailaddress.value,
     })
+    
     .then(
         function(response) {
             const el = document.getElementById("email-message");
@@ -272,8 +290,12 @@ function sendMail(mailingList) {
         function(error) {
             alert('Oops... ' + JSON.stringify(error));
         }
+    
+    
     );
-    return false;  // To block from loading a new page
+    document.getElementById("mailingList").reset();
+    return false; 
+    
 }
 
 
