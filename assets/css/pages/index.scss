@@ -265,6 +265,7 @@ p {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    padding-top: 4px;
     @include desktop {
         padding-top: 25px;
     }
