@@ -26,3 +26,31 @@
         box-shadow: none;
     }    
 }
+
+@keyframes flicker-button {
+    
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      
+        text-shadow:
+            -0.2rem -0.2rem 1rem $gbeige,
+            0.2rem 0.2rem 1rem $gbeige,
+            0 0 2rem $gorange,
+            0 0 4rem $gorange,
+            0 0 6rem $gorange,
+            0 0 8rem $gorange,
+            0 0 10rem $gorange;
+        
+        box-shadow:
+            0 0 .1rem $gbeige,
+            inset 0 0 .1rem $gbeige,
+            0 0 2rem $gorange,
+            inset 0 0 0.2rem $gorange,
+            0 0 4rem $gorange,
+            inset 0 0 0.2rem $gorange;        
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+        box-shadow: none;
+    }    
+}
