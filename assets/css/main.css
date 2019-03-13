@@ -41,7 +41,7 @@ body {
 
 #places-map {
   width: 90vw;
-  height: 40vh; }
+  height: 38.5vh; }
   @media (min-width: 768px) and (max-width: 991px) {
     #places-map {
       width: 80vw;
@@ -57,7 +57,7 @@ body {
 
 #events-list {
   width: 90vw;
-  height: 45vh; }
+  height: 44.5vh; }
   @media (min-width: 768px) and (max-width: 991px) {
     #events-list {
       width: 80vw;
