@@ -234,6 +234,12 @@ There have been several issues throughout development with my JS code breaking, 
 
 There is a well-known issue with Safari for iPhone displaying parallax backgrounds, I have looked into this but have decided to compromise my design for the smallest screens.
 
+There was a bug with the events API returning 'undefined' for some ticket prices. I created a function to check if the value was 'undefined' and provide a response for the user.
+
+There was an issue with the form not resetting after submit, I added a .reset function to clear the user's details.
+
+My social links do not link anywhere as there are no social media accounts associated with the site.
+
 ### Deployment
 ___
 
