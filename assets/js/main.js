@@ -47,10 +47,15 @@ $(document).ready(function() {
     
 //Dropdown Menu for Larger Screen Size
     
-    if ($(".navbar").css("justify-content") == ("flex-end")) {
-            $(".btn-position").removeClass(["dropdown"])
-            $(".btn-position").addClass(["dropleft"])
-    }
+    $("#dropdownMenuButton").click(function() {
+        if ($(".navbar").css("justify-content") == ("flex-end")) {
+                $(".btn-position").removeClass(["dropdown"])
+                $(".btn-position").addClass(["dropleft"])
+        } else {
+            $(".btn-position").addClass(["dropdown"])
+            $(".btn-position").removeClass(["dropleft"])
+        }
+    });
     
 //Scroll To Top Button
     
@@ -279,7 +284,7 @@ $(document).ready(function() {
                     temperature,
                     minTemperature,
                     maxTemperature
-                    };
+                };
                 
                 $("#weather-data").html(`<p>The current weather in Glasgow is <span id="weatherDescription">${weatherDescription}</span>.<br> The current temperature is ${temperature}. Today's high will be ${maxTemperature}, today's low will be ${minTemperature}.</p>`);
                 }
