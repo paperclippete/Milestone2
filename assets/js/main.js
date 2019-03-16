@@ -43,6 +43,10 @@ $(document).ready(function() {
         else $("#weather-comment").html("This weather's mental!")
     });
     
+    if ($(".navbar").css("justify-content") == ("flex-end")) {
+            $(".btn-position").removeClass(["dropdown"])
+            $(".btn-position").addClass(["dropleft"])
+    }
     
     $(window).scroll(function(){
         if ($(this).scrollTop() > 800) {
