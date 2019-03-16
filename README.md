@@ -75,7 +75,7 @@ ___
 
 > Navigation Bar/ Dropdown Menu
 
-I used Bootstrap 4 to create a minimalist navigation bar that would toggle a dropdown menu on all devices. I felt the single-page-site should not require too many navigation options as the user can scroll through. After reading several blogs on web-design I decided not to add any 'scroll' buttons or prompts as users understand they will need to scroll for more content. A user will not have to press the browser's back-button as the navigation bar/ button is fixed.
+I used Bootstrap 4 to create a minimalist navigation bar that would toggle a dropdown menu on all devices. I felt the single-page-site should not require too many navigation options as the user can scroll through. After reading several blogs on web-design I decided not to add any 'scroll' buttons or prompts as users understand they will need to scroll for more content. A user will not have to press the browser's back-button as the navigation bar/ button is fixed. I moved the button to the right for larger devices that would use a touch-pad or mouse for navigation as users (mostly right-handed) would expect this.
 
 > Hero Image/ Parallax Background
 
@@ -99,7 +99,7 @@ I used Bootstap Grid to ensure this section was fully responsive. I used flexbox
 
 > Google Map
 
-I worked really hard using a combination of the documentation available from Google and my own code in order to have my map display the locations I wanted. I created and linked to a JSON file and created a function that would then assign a marker for each place. I used a template literal in order to publish the information on each location within a Google Info Window. I wanted to use geolocation in order to show the user's position relative to the markers. I've styled some of the Map elements in order to increase visibility and functionality for my users.
+I worked really hard using a combination of the documentation available from Google and my own code in order to have my map display the locations I wanted. I created and linked to a JSON file and created a function that would then assign a marker for each place. I used a template literal in order to publish the information on each location within a Google Info Window. I wanted to use geolocation in order to show the user's position relative to the markers (**Geolocation feature means users outwith Glasgow will have to scroll to Glasgow - see 'Features for the Future' below**). I've styled some of the Map elements in order to increase visibility and functionality for my users.
 
 > What's On?
 
@@ -140,8 +140,8 @@ After testing, it might be an option to toggle the geolocation saving someone ha
 
 #### Technologies Used
 
-* **HTML5** - used for creating content and basic layout and validated with W3C
-* **CSS3** - used for customised styling and layout and validated with W3C
+* **HTML** - used for creating content and basic layout and validated with W3C
+* **CSS** - used for customised styling and layout and validated with W3C
 * **JavaScript** - used to provide interactivity and logic to the site
 * **JSON** - used to provide a dataset that can be used by JavaScript
 * [Cloud9 IDE](https://ide.c9.io/) - this was the IDE where I developed and ran my application
@@ -159,6 +159,7 @@ After testing, it might be an option to toggle the geolocation saving someone ha
 * [The List API](https://api.list.co.uk/) - connected with this API to give up-to-date events information (through this I used FetchAPI)
 * [Open Weather Map](https://openweathermap.org/) - connected with this API to give current, localised weather information
 * [Pixabay.com](https://www.flickr.com/), [Flikr.com](https://www.flickr.com/) and [ClipartMax.com](https://www.clipartmax.com/) used for stock images (for the educational purposes of this project only) and [TinyPNG.com](https://tinypng.com/) used for image compression
+* [Favicon Generator](https://www.favicon.cc/?) - I used this to generate a Favicon in the style of the Glasgow Subway logo
 * [W3C Validator](https://validator.w3.org/) - HTML Validator, [W3C CSS Validator](https://jigsaw.w3.org/css-validator/), [Esprima](esprima.org) - JS Validator
 * Google Developer Tools, Stack-Overflow, Code-Institue Slack Community, Code-Institute module notes, W3Schools, CSS Tricks - all used for reference when I encountered a bug or needed extra support with any issues.
 
@@ -232,7 +233,7 @@ There was an interesting (and frustrating) bug with Safari on iPhone - the backg
 
 There have been several issues throughout development with my JS code breaking, I worked hard using console.logs and debuggers to pinpoint errors and fix them. There shouldn't be any errors displaying in the console.
 
-There is a well-known issue with Safari for iPhone displaying parallax backgrounds, I have looked into this but have decided to compromise my design for the smallest screens.
+There is a well-known issue with Safari for iPhone (*iPad too!*) displaying parallax backgrounds, I have looked into this but have decided to compromise my design for the smallest screens.
 
 There was a bug with the events API returning 'undefined' for some ticket prices. I created a function to check if the value was 'undefined' and provide a response for the user.
 
@@ -245,29 +246,31 @@ ___
 
 I saved my work regularly on the IDE Cloud 9. I also committed my code to GitHub at regular intervals. I feel that I could have relied more heavily on git commits as I know it provides version control. I feel that my commit messages were specific and informing.
 
-In order to deploy my work I opened the terminal within Cloud 9.
+In order to deploy my work I opened the terminal within Cloud 9...
 
-I initialised and set up a local git repository with the command ``` git init ```
+* initialised and set up a local git repository with the command ``` git init ```
 
-I added files to my git repo with the command ``` git add (specific file location or . for all files) ```
+* added files to my git repo with the command ``` git add (specific file location or . for all files) ```
 
-I then commited files to the local repo with ``` git commit``` and wrote a message after -m that would be useful in either complex projects or when working collaboratively.
+* commited files to the local repo with ``` git commit``` and wrote a message after -m that would be useful in either complex projects or when working collaboratively.
 
-In order to commit my code to a remote repository I had to create a new project on GitHub
+* in order to commit my code to a remote repository I had to create a new project on GitHub and then typed into the terminal ``` git remote add origin``` followed by ``` https://github.com/[USER NAME]/[PROJECT NAME]```
 
-I then typed into the terminal ``` git remote add origin``` followed by ``` https://github.com/paperclippete/milestone2```
+* I then used ``` git push -u origin master``` to push my code to my master branch as I was only using one branch. I did not feel that my project was complex enough to create another branch, however I did spend time familiarising myself with this.
 
-I would then use ``` git push -u``` to push my code to my master branch as I was only using one branch. I did not feel that my project was complex enough to create another branch, however I did spend time familiarising myself with this.
+* Each time after initial commit I would use ``` git push``` to push my code to Git Hub
 
-In GitHub I then published my master branch to GitHub pages, this is my deployed version. 
+* In GitHub I then published my master branch to GitHub pages, this is my deployed version. 
 
-**The difference between the deployed version and the development version will be that I'm using a minified CSS file whereas I used SASS to compile my styling during development.**
+**The difference between the deployed version and the development version is that I'm using a minified CSS file whereas I used SASS to compile my styling during development.**
 
 ### Credits
 ___
 
 #### Content
 All of the text content on the website was my own. The descriptions of food and drink locations in Glasgow was sourced from their own websites.
+
+**This site has been created for educational purposes only**
 
 #### Media
 The images displayed in this site were either my own or sourced from the sites listed above. All images are for educational purposes only.
