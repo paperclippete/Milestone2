@@ -95,7 +95,7 @@ section {
     @include desktop {
         justify-content: flex-end;
     }
-    @include desktop {
+    @include large-desktop {
         justify-content: flex-end;
     }
 }

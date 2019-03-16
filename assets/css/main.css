@@ -207,7 +207,7 @@ section {
   @media (min-width: 992px) and (max-width: 1199px) {
     .navbar {
       justify-content: flex-end; } }
-  @media (min-width: 992px) and (max-width: 1199px) {
+  @media (min-width: 1200px) {
     .navbar {
       justify-content: flex-end; } }
 
