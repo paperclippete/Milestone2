@@ -1,5 +1,6 @@
-//code for index.html features
+//General Site Features
 
+//Language Feature
 $(document).ready(function() {
     $("#GLA").click(function() {
         $(".site-heading").html("Glesga");
@@ -23,6 +24,7 @@ $(document).ready(function() {
         $("#di-4").html("Weather");
     });
     
+//Weather Comment Feature
    
     $(".weather-comment-img").mouseover(function() {
         $(".weather-comment-speech").removeClass(["hidden"]);
@@ -43,10 +45,14 @@ $(document).ready(function() {
         else $("#weather-comment").html("This weather's mental!")
     });
     
+//Dropdown Menu for Larger Screen Size
+    
     if ($(".navbar").css("justify-content") == ("flex-end")) {
             $(".btn-position").removeClass(["dropdown"])
             $(".btn-position").addClass(["dropleft"])
     }
+    
+//Scroll To Top Button
     
     $(window).scroll(function(){
         if ($(this).scrollTop() > 800) {
@@ -63,7 +69,7 @@ $(document).ready(function() {
     });
 });
 
-// code for maps
+// Google Maps API
 
 function initMap() {
     
@@ -73,12 +79,15 @@ function initMap() {
         mapTypeControl: false
     });
 
+// Link to Places JSON File
+
     populatePlaces("assets/js/places.json", function(text){
         var placesList = JSON.parse(text);
         
     
         placesList.places.forEach(function(eachPlace) {
-            
+
+// Assign each location GM Marker            
             
             var lat = eachPlace.position.lat;
             var long = eachPlace.position.long;
@@ -90,12 +99,14 @@ function initMap() {
             map: map,
             title: eachPlace.name
         });
+        
+//Assign each marker an Info Window
     
         var infoWindow = new google.maps.InfoWindow({
             content: contentcreator(eachPlace)
         });
     
-  
+
         marker.addListener('click', function() {
             infoWindow.open(map, marker);
         });
@@ -110,7 +121,9 @@ function initMap() {
         });
         
     });
-    // Try HTML5 geolocation.
+
+// HTML Geolocation
+
         locInfoWindow = new google.maps.InfoWindow;
 
         if (navigator.geolocation) {
@@ -120,8 +133,8 @@ function initMap() {
                     lng: position.coords.longitude
                 };
                     
-        //center map on actual location
-        //assign current location a marker
+// Centers map on actual location and assigns an Info Window
+
                 map.setCenter(pos);
                 locInfoWindow.setPosition(pos);
                 locInfoWindow.setContent("You're Here!");
@@ -132,7 +145,9 @@ function initMap() {
                     handleLocationError(true, locInfoWindow, map.getCenter());
                 });
         } else {
-        // Browser doesn't support Geolocation
+
+// If browser doesn't support Geolocation
+
             handleLocationError(false, locInfoWindow, map.getCenter());
         }
         
@@ -145,10 +160,9 @@ function initMap() {
             locInfoWindow.open(map);
         }
                 
-    
-
 });
     
+// Map Functions
     
     function populatePlaces(file, callback) {
         var rawFile = new XMLHttpRequest();
@@ -163,11 +177,6 @@ function initMap() {
         rawFile.send(null);
     }
 
- 
-    
-    
-    
-   
     function contentcreator(name) {
         return `<div id="map-content">
             <h4 style="text-align: center"><strong>${name.name}</strong></h4><p>Perfect for: "${name.type}"
@@ -176,11 +185,9 @@ function initMap() {
             </div>`;
     }
 
-            
-
 }
 
-// code for events
+// Events API
 
 
 var apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNWEwMzYwNGMtMDQwMy00MDc1LWE0NGItNThjOTIwNjIyODQ5Iiwia2V5X2lkIjoiMWM1MjUxOTItMjQzOC00MDZhLWJiZDgtOTczMDViZDU3Njc2IiwiaWF0IjoxNTUwMzE5Mzg2fQ.OReYaxoTq9PiZC5InfxNWT0pRtXWlTSNog6vQYNMerY';
@@ -202,6 +209,8 @@ function eventsData() {
 			ul.innerHTML = '';
 			data.forEach(function(result) {
 			       	
+// Display Time Stamp using momentJS
+
 				var rawTime = result.schedules[0].performances[0].ts;
 				var eventTime = moment(rawTime).format("Do MMMM YYYY, h:mm a");
 				
@@ -210,6 +219,9 @@ function eventsData() {
 				var resultId = result.list_id;
 				var name = result.name;
 				var eventDetails = result.schedules[0].place.name;
+				
+// Function for price data being 'undefined'
+				
 				var price = function() {
 				    var priceSuccess = result.schedules[0].ticket_summary; 
 				    var priceError = "unknown, click above for more details";
@@ -230,19 +242,15 @@ function eventsData() {
 				li.appendChild(eventInfo);
 				ul.appendChild(li);
 				
-				
-				
+			
 			});
 	    });
 		    
-	
-		
-		
 }
 
 eventsData();
 
-//code for weather
+// Weather API
 
 
 $(document).ready(function() {
@@ -259,7 +267,9 @@ $(document).ready(function() {
             url: baseURL,
             dataType: "jsonp",
             success: function(data) {
-                //display temperatures in Celsius
+
+//display temperatures in Celsius
+
                 temperature = Math.round(data.main.temp - 273.15) + '°C';
 				minTemperature = Math.round(data.main.temp_min - 273.15) + '°C';
 				maxTemperature = Math.round(data.main.temp_max - 273.15) + '°C';
@@ -278,7 +288,7 @@ $(document).ready(function() {
 });
 
 
-// code for emailJS
+// EmailJS API
 
 function sendMail(mailingList) {
     emailjs.init("user_hxQzNQMw7fcgsyh9My8Qt");
@@ -302,12 +312,5 @@ function sendMail(mailingList) {
     return false; 
     
 }
-
-
-
-
-
-
-
 
 
