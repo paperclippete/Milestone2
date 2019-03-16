@@ -78,13 +78,6 @@ body {
   20%, 24%, 55% {
     text-shadow: none;
     box-shadow: none; } }
-@keyframes flicker-button {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    text-shadow: -0.2rem -0.2rem 1rem #f0ebda, 0.2rem 0.2rem 1rem #f0ebda, 0 0 2rem #d05300, 0 0 4rem #d05300, 0 0 6rem #d05300, 0 0 8rem #d05300, 0 0 10rem #d05300;
-    box-shadow: 0 0 0.1rem #f0ebda, inset 0 0 0.1rem #f0ebda, 0 0 2rem #d05300, inset 0 0 0.2rem #d05300, 0 0 4rem #d05300, inset 0 0 0.2rem #d05300; }
-  20%, 24%, 55% {
-    text-shadow: none;
-    box-shadow: none; } }
 .footer-info {
   display: flex;
   flex-direction: column;
@@ -153,6 +146,12 @@ body {
       background-attachment: unset;
       background-position: top;
       background-repeat: repeat-y; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    body {
+      background-size: 100%, 206vh;
+      background-attachment: unset;
+      background-position: top;
+      background-repeat: repeat-y; } }
 
 .hidden {
   visibility: hidden; }
@@ -205,6 +204,12 @@ section {
   position: fixed;
   z-index: 10;
   width: 100%; }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .navbar {
+      justify-content: flex-end; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .navbar {
+      justify-content: flex-end; } }
 
 .dropdown-menu {
   color: inherit;
@@ -215,13 +220,11 @@ section {
   padding: 4px 12px; }
 
 #btn-to-top {
-  padding: 6px 4px; }
-
-.top-button {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-right: 10px; }
+  padding: 6px 4px;
+  right: 0;
+  position: absolute;
+  top: 86%;
+  margin-right: 16px; }
 
 .choose-language {
   display: flex;
@@ -459,7 +462,7 @@ a {
   @media (min-width: 768px) and (max-width: 991px) {
     .weather-comment-img {
       width: 69%;
-      top: -7%; } }
+      top: -3%; } }
   @media (min-width: 992px) and (max-width: 1199px) {
     .weather-comment-img {
       top: 0%; } }
