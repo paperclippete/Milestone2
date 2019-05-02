@@ -153,7 +153,7 @@ After testing, it might be an option to toggle the geolocation saving someone ha
 * **JavaScript** - used to provide interactivity and logic to the site
 * **JSON** - used to provide a dataset that can be used by JavaScript
 * [Cloud9 IDE](https://ide.c9.io/) - this was the IDE where I developed and ran my application
-* [GitHub](https://github.com) - I used this to push my git files and used [Git Hub Pages](https://pages.github.com/) to deploy my site.
+* **Git** - I pushed my files using **Git**, storing them in a repository on **GitHub** and used **[Git Hub Pages](https://pages.github.com/)** to deploy my site.
 * [jQuery](https://jquery.com/) - JavaScript library used to connect with APIs and custom-code for the site which allows for DOM manipulation
 * [SASS](https://sass-lang.com/) - used as a preprocessor in creating style files with variables, media queries and mixins
 * [CSS Minifier](https://cssminifier.com/) - used to minify my CSS data for deployment
