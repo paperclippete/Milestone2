@@ -7,6 +7,7 @@ Project Purpose: 4, UX design: 2, Suitability for purpose: 4, Navigation: 3, Eas
 
 Your percentage grade for this project is 85.0%. Please note that the median grade our students get, corresponding to a project that meets the expectations across all criteria, is approximately 65%.
 
+___
 Welcome to Glasgow | Your Handy Guide. 
 
 This is exactly what it says on the tin! It's a quick and easy way for users to find the best Glasgow has to offer, quickly!
