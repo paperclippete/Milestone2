@@ -1,5 +1,12 @@
 # Glasgow ![Traffic Cone](assets/images/glasgow-images/cmaxtrafficcone.1.png) Your Handy Guide
 
+## Grading
+
+The breakdown of your marks for each assessment criterion (graded from 0 to 5) are as follows:
+Project Purpose: 4, UX design: 2, Suitability for purpose: 4, Navigation: 3, Ease of Use: 4, Information Architecture: 5, Defensive Design: 3, Responsive Design: 5, Image Presentation: 5, Colour scheme and typography: 4, Appropriate use of HTML: 5, Appropriate use of CSS: 4, Appropriate use of JavaScript: 4, Appropriate use of JavaScript APIs: 5, Directory Structure and File Naming: 5, Version Control: 5, Testing implementation: 5, Testing write-up: 4, Readme file: 5, Comments: 4, Deployment implementation: 4, Deployment write-up: 4
+
+Your percentage grade for this project is 85.0%. Please note that the median grade our students get, corresponding to a project that meets the expectations across all criteria, is approximately 65%.
+
 Welcome to Glasgow | Your Handy Guide. 
 
 This is exactly what it says on the tin! It's a quick and easy way for users to find the best Glasgow has to offer, quickly!
